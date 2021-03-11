@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const thanksBackgroundStyle = {
   width: "100%",
-  height: "800px",
+  height: "900px",
   backgroundImage: `url(${backgroundImage})`,
   backgroundSize: "cover",
   margin: "0% 0 0 0",
@@ -26,11 +26,13 @@ const Thanks = () => {
         </p>
         <p>- The Flex Together Team</p>
       </div>
-      <Router>
-        <Link to="/start-page">
-          <ProgressButton text="DONE" />
-        </Link>
-      </Router>
+      <div className="thanks-prog-button">
+        <Router>
+          <Link to="/start-page">
+            <ProgressButton text="DONE" />
+          </Link>
+        </Router>
+      </div>
     </div>
   );
 };

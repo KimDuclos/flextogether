@@ -1,8 +1,10 @@
-.thanks-page-title {
+.thanks-page {
+  .thanks-page-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
     padding: 2% 0 0 19%;
+    line-height: .5em;
   }
   .thanks-page-paragraph {
     color: white;
@@ -12,5 +14,10 @@
     font-weight: bold;
     line-height: 1.6em;
     margin: 0 0 1% 40%;
-    text-align: left;
+    text-align: center;
+    font-size: 2em;
   }
+  .thanks-prog-button {
+      margin: 10% 0 0 10%;
+  }
+}
