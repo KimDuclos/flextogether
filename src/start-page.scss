@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .start-page {
+  border: 1px solid black;
   .start-page-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 8% 0 0 0;
+    padding: 6% 0 0 0;
+  }
+  .start-page-paragraph {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
   }
   #start-progress-button {
     margin: 22% 0 0 10%;

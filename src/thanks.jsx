@@ -28,7 +28,7 @@ const Thanks = () => {
       </div>
       <div className="thanks-prog-button">
         <Router>
-          <Link to="/start-page">
+          <Link to="/" style={{ textDecoration: "none" }}>
             <ProgressButton text="DONE" />
           </Link>
         </Router>

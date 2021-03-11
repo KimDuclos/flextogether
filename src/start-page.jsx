@@ -6,7 +6,7 @@ import ProgressButton from "./components/progress-button.jsx";
 
 const startBackgroundStyle = {
   width: "100%",
-  height: "880px",
+  height: "890px",
   backgroundImage: `url(${startBackgroundImage})`,
   backgroundSize: "cover",
   margin: "0% 0 0 0",
@@ -16,8 +16,9 @@ const StartPage = () => {
   return (
     <div className="start-page" style={startBackgroundStyle}>
       <h1 className="start-page-title">Flex Together</h1>
+      <p className="start-page-paragraph">Please click or tap START</p>
       <Router>
-        <Link to="/welcome-page">
+        <Link to="/welcome-page" style={{ textDecoration: "none" }}>
           <ProgressButton
             className="prog-button"
             id="start-progress-button"

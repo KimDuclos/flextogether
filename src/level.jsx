@@ -7,10 +7,11 @@ import ProgressButton from "./components/progress-button";
 
 const levelBackgroundStyle = {
   width: "100%",
-  height: "800px",
+  height: "910px",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "cover",
+  backgroundSize: "100%",
   margin: "0% 0 0 0",
+  display: "inline-block"
 };
 
 const Level = () => {
@@ -29,10 +30,10 @@ const Level = () => {
       </div>
       <div className="level-prog-buttons">
         <Router>
-          <Link to="/tell-more">
+          <Link to="/tell-more" style={{ textDecoration: "none" }}>
             <ProgressButton className="level-back-button" text="BACK" />
           </Link>
-          <Link to="/calendar">
+          <Link to="/calendar" style={{ textDecoration: "none" }}>
             <ProgressButton className="level-next-button" text="NEXT" />
           </Link>
         </Router>

@@ -7,10 +7,11 @@ import WhoAreYouButton from "./components/who-are-you-button.jsx";
 
 const whoAreYouBackgroundStyle = {
   width: "100%",
-  height: "800px",
+  height: "890px",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "cover",
+  backgroundSize: "100%",
   margin: "0% 0 0 0",
+  backgroundRepeat: "no-repeat"
 };
 
 const WhoAreYou = () => {
@@ -34,14 +35,14 @@ const WhoAreYou = () => {
       </div>
       <div className="who-are-you-prog-button-section">
         <Router>
-          <Link to="/welcome-page">
+          <Link to="/welcome-page" style={{ textDecoration: "none" }}>
             <ProgressButton
               className="prog-button"
               id="who-are-you-back-btn"
               text="BACK"
             ></ProgressButton>
           </Link>
-          <Link to="/tell-more">
+          <Link to="/tell-more" style={{ textDecoration: "none" }}>
             <ProgressButton
               className="prog-button"
               id="who-are-you-next-button"

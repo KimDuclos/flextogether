@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const calendarBackgroundStyle = {
   width: "100%",
-  height: "1600px",
+  height: "1700px",
   backgroundImage: `url(${calendarBackground})`,
   backgroundSize: "cover",
   margin: "0% 0 0 0",
@@ -76,7 +76,6 @@ const Calendar = () => {
         <Dropdown
           className="dropdown"
           options={options}
-          //   onChange={this._onSelect}
           value={defaultOption}
           placeholder={"Select an Option"}
         />
@@ -105,10 +104,10 @@ const Calendar = () => {
       </div>
       <div className="time-prog-buttons">
         <Router>
-          <Link to="/level">
+          <Link to="/level" style={{ textDecoration: "none" }}>
             <ProgressButton text="BACK" />
           </Link>
-          <Link to="/thanks">
+          <Link to="/thanks" style={{ textDecoration: "none" }}>
             <ProgressButton text="NEXT" />
           </Link>
         </Router>

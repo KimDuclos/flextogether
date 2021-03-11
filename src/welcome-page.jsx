@@ -5,11 +5,12 @@ import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 
 const welcomeBackgroundStyle = {
+  backgroundSize: "auto 150%",
+  display: "inline-block",
   width: "100%",
-  height: "800px",
+  height: "910px",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "cover",
-  margin: "0% 0 0 0",
+  margin: "0%",
 };
 
 const WelcomePage = () => {
@@ -30,7 +31,7 @@ const WelcomePage = () => {
         Please click the NEXT button to get started!
       </p>
       <Router>
-        <Link to="/who-are-you">
+        <Link to="/who-are-you" style={{ textDecoration: "none" }}>
           <ProgressButton
             className="prog-button"
             id="welcome-progress-button"

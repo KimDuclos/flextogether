@@ -6,10 +6,11 @@ import backgroundImage from "./assets/backgroundImage.png";
 
 const tellMoreBackgroundStyle = {
   width: "100%",
-  height: "800px",
+  height: "910px",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "cover",
+  backgroundSize: "100%",
   margin: "0% 0 0 0",
+  display: "inline-block"
 };
 
 const TellMore = () => {
@@ -58,10 +59,10 @@ const TellMore = () => {
       </div>
       <div className="tell-more-prog-buttons">
         <Router>
-          <Link to="/who-are-you">
+          <Link to="/who-are-you" style={{ textDecoration: "none" }}>
             <ProgressButton className="tell-more-back-btn" text="BACK" />
           </Link>
-          <Link to="/level">
+          <Link to="/level" style={{ textDecoration: "none" }}>
             <ProgressButton className="tell-more-next-btn" text="NEXT" />
           </Link>
         </Router>
