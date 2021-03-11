@@ -1,0 +1,40 @@
+.calendar-page {
+  .calendar-page-title {
+    color: white;
+    font-size: 4em;
+    font-family: "Paytone One", sans-serif;
+    padding: 2% 0 0 30%;
+  }
+  .calendar-page-paragraph {
+    color: white;
+    width: 40%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 0 0 1% 45%;
+    text-align: left;
+  }
+  .time-zone-title {
+    color: white;
+    width: 30%;
+    font-family: "Roboto", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 2% auto 0 auto;
+    text-align: left;
+  }
+  .dropdown {
+    background-color: white;
+    width: 20%;
+    height: 35px;
+    border-radius: 4px;
+    padding: 1% 0 0 0;
+  }
+}
+
+.drop-item {
+  background-color: white;
+  line-height: 1.5em;
+}

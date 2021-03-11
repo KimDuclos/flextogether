@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.level-button {
+  background-color: black;
+  color: white;
+  width: 370px;
+  height: 180px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 8px;
+  .level-button-text {
+    padding: 13% 0 0 0;
+  }
+}
