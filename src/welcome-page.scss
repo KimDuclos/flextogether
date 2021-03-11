@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+$size800: "800px";
+
 .welcome-page {
     .welcome-page-title {
         color: white;
         font-size: 4em;
         font-family: "Paytone One", sans-serif;
         padding: 2% 0 0 30%;
+        @media (max-width: $size800) {
+            padding: 2% auto 0 auto;
+        }
     }
     .welcome-paragraph {
         color: white;

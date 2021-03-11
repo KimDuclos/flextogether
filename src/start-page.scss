@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+$size1000: "1000px";
+
 .start-page {
   border: 1px solid black;
   .start-page-title {
@@ -17,5 +19,8 @@
   }
   #start-progress-button {
     margin: 22% 0 0 10%;
+    @media (max-width: $size1000) {
+      margin: 32% auto 0 auto;
+    }
   }
 }
