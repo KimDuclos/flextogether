@@ -7,6 +7,7 @@ import WhoAreYou from "./who-are-you.jsx";
 import TellMore from "./tell-more";
 import Level from "./level.jsx";
 import Calendar from "./calendar";
+import Thanks from "./thanks.jsx";
 
 class App extends Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/tell-more" component={TellMore} />
           <Route path="/level" component={Level} />
           <Route path="/calendar" component={Calendar}/>
+          <Route path="/thanks" component={Thanks} />
         </Router>
       </div>
     );

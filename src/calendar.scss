@@ -3,7 +3,7 @@
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 2% 0 0 30%;
+    padding: 2% 0 0 19%;
   }
   .calendar-page-paragraph {
     color: white;
@@ -12,7 +12,7 @@
     font-size: 1.3em;
     font-weight: bold;
     line-height: 1.6em;
-    margin: 0 0 1% 45%;
+    margin: 0 0 1% 40%;
     text-align: left;
   }
   .time-zone-title {
@@ -23,17 +23,49 @@
     font-weight: bold;
     line-height: 1.6em;
     margin: 2% auto 0 auto;
-    text-align: left;
   }
   .dropdown {
     background-color: white;
     width: 20%;
     height: 35px;
-    border-radius: 4px;
+    border-radius: 1px;
     padding: 1% 0 0 0;
+    margin: 2% auto 0 auto;
+  }
+  .days {
+    width: 95%;
+    margin: 0 auto;
+    .day-titles {
+      color: white;
+      font-size: 1.5em;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 5% 0 0 0;
+      .day {
+        width: 130px;
+      }
+    }
+  }
+  .time-picker {
+    width: 90%;
+    margin: 0 auto;
+    .time-picker-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .time-prog-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    margin: 4% auto 0 auto;
   }
 }
-
 .drop-item {
   background-color: white;
   line-height: 1.5em;
