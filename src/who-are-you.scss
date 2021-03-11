@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.who-are-you-page {
+    padding: 0%;
+    .who-are-you-title {
+        color: white;
+        font-size: 4em;
+        font-family: "Paytone One", sans-serif;
+        padding: 10% auto 0 auto;
+    }
+    .who-are-you-instructions {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    .who-are-you-button-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+        margin: 3% auto 0 auto;
+        .who-are-you-button {
+            padding: 10% 0 0 0;
+        }
+        #who-btn-2 {
+            margin: 0 10% 0 0;
+        }
+    }
+    .who-are-you-prog-button-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 35%;
+        margin: 6% auto 0 auto;
+    }
+}

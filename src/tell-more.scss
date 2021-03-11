@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.tell-more-page {
+  .tell-more-title {
+    color: white;
+    font-size: 4em;
+    font-family: "Paytone One", sans-serif;
+    padding: 2% 0 0 30%;
+  }
+  .tell-more-paragraph {
+    color: white;
+    width: 30%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 0 0 1% 50%;
+    text-align: left;
+  }
+  .contact-form {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 0 0 34%;
+    .contact-input {
+      width: 30%;
+      border-radius: 4px;
+      border: none;
+      height: 3em;
+      font-size: 1.1em;
+      padding: 0 0 0 2%;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+    }
+  }
+  .notification-pref {
+    color: white;
+    width: 30%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 0 0 1% 50%;
+    text-align: right;
+    margin: 5% 0 0 64%;
+  }
+  .notification-buttons {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2% 3.5% 0 0;
+    .radio-button {
+      margin: 0 2% 0 1%;
+      height: 24px;
+      width: 24px;
+    }
+  }
+  .tell-more-prog-buttons {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 12% auto 0 auto;
+  }
+}

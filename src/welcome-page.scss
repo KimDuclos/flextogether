@@ -1,15 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 .welcome-page {
     .welcome-page-title {
         color: white;
         font-size: 4em;
         font-family: "Paytone One", sans-serif;
+        padding: 2% 0 0 30%;
     }
     .welcome-paragraph {
         color: white;
+        width: 30%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 1.6em;
+        margin: 0 0 1% 50%;
+        text-align: left;
     }
-    .welcome-progress-button {
-        margin: 0 0 0 0;
+    #welcome-progress-button {
+        margin: 8% 0 0 10%;
     }
 }

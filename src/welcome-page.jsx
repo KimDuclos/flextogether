@@ -16,9 +16,10 @@ const WelcomePage = () => {
   return (
     <div className="welcome-page" style={welcomeBackgroundStyle}>
       <h1 className="welcome-page-title">Welcome to Flex Together</h1>
+      <p className="welcome-paragraph">We’re so glad you joined our team.</p>
       <p className="welcome-paragraph">
-        We’re so glad you joined our team. This application will help you find a
-        companion through the Flex Together program.
+        This application will help you find a companion through the Flex
+        Together program.
       </p>
       <p className="welcome-paragraph">
         The next few screens will walk you through the process of finding a
