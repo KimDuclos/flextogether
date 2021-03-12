@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./level.scss";
 import backgroundImage from "./assets/backgroundImage.png";

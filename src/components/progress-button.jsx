@@ -3,8 +3,8 @@ import "./progress-button.scss";
 
 const ProgressButton = (props) => {
   return (
-    <div className="prog-button" id={props.id}>
-      <div className="prog-button-text">{props.text}</div>
+    <div className="base-prog-button" id={props.id}>
+      <div className="base-prog-button-text">{props.text}</div>
     </div>
   );
 };

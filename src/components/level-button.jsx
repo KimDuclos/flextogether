@@ -1,4 +1,3 @@
-import React from "react";
 import "./level-button.scss";
 
 const LevelButton = (props) => {

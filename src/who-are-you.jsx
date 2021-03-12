@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import ProgressButton from "./components/progress-button";
 import "./who-are-you.scss";
@@ -11,7 +10,7 @@ const whoAreYouBackgroundStyle = {
   backgroundImage: `url(${backgroundImage})`,
   backgroundSize: "100%",
   margin: "0% 0 0 0",
-  backgroundRepeat: "no-repeat"
+  backgroundRepeat: "no-repeat",
 };
 
 const WhoAreYou = () => {
@@ -23,7 +22,6 @@ const WhoAreYou = () => {
       </p>
       <div className="who-are-you-button-section">
         <WhoAreYouButton
-          className="who-are-you-button"
           id="who-btn-1"
           text="I am a senior looking for a fitness companion."
         ></WhoAreYouButton>

@@ -17,6 +17,9 @@ $size1000: "1000px";
     font-weight: bold;
     font-size: 2em;
   }
+  // .prog-button:active {
+  //   border: 4px solid green;
+  // }
   #start-progress-button {
     margin: 22% 0 0 10%;
     @media (max-width: $size1000) {

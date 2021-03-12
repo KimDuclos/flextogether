@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
-.prog-button {
+.base-prog-button {
   background-color: black;
   color: white;
   width: 220px;
@@ -9,7 +9,7 @@
   font-size: 2.4em;
   font-weight: bold;
   border-radius: 8px;
-  .prog-button-text {
+  .base-prog-button-text {
     padding: 5.5% 0 0 0;
   }
   :hover {
@@ -19,4 +19,7 @@
     height: 60px;
     border-radius: 8px;
   }
+}
+.base-prog-button:active {
+  border: 8px solid green;
 }
