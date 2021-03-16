@@ -1,15 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.button-hover-border {
+  :hover {
+    box-shadow: 0 0 3px #ddd;
+  }
+}
 
 .who-are-you-button {
-    background-color: black;
-    color: white;
-    width: 370px;
-    height: 255px;
-    font-family: "Roboto", sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    border-radius: 8px;
-    .who-are-you-btn-text {
-        padding: 5% 0 0 0;
-    } 
+  background-color: black;
+  color: white;
+  width: 370px;
+  height: 255px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .who-are-you-btn-text {
+      width: 370px;
+      height: 255px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+  }
 }

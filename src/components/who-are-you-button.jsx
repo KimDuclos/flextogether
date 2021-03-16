@@ -6,18 +6,23 @@ const WhoAreYouButton = (props) => {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div
-      className="who-are-you-button"
-      onClick={() => setClicked(!clicked)}
-      // clicked = white, not-clicked = black
-      style={{ backgroundColor: clicked ? "white" : "black" }}
-    >
+    <div className="button-hover-border">
       <div
-        className="who-are-you-btn-text"
-        // clicked = black, not clicked = white
-        style={{ color: clicked ? "black" : "white" }}
+        id="who-button"
+        className="who-are-you-button"
+        onClick={() => setClicked(!clicked)}
+        // clicked = white, not-clicked = black
+        style={{
+          backgroundColor: clicked ? "white" : "black",
+        }}
       >
-        {props.text}
+        <div
+          className="who-are-you-btn-text"
+          // clicked = black, not clicked = white
+          style={{ color: clicked ? "black" : "white" }}
+        >
+          {props.text}
+        </div>
       </div>
     </div>
   );

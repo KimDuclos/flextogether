@@ -16,10 +16,10 @@
     background-color: white;
     color: black;
     width: 220px;
-    height: 60px;
-    border-radius: 8px;
+    height: 60px; 
+    border-radius: 8px;   
   }
 }
 .base-prog-button:active {
-  border: 8px solid green;
+  box-shadow: 0 0 20px green;
 }

@@ -22,11 +22,12 @@ const WhoAreYou = () => {
       </p>
       <div className="who-are-you-button-section">
         <WhoAreYouButton
+          className="who-are-you-btn"
           id="who-btn-1"
           text="I am a senior looking for a fitness companion."
         ></WhoAreYouButton>
         <WhoAreYouButton
-          className="who-are-you-button"
+          className="who-are-you-btn"
           id="who-btn-2"
           text="I would like to be a fitness companion for a senior"
         ></WhoAreYouButton>

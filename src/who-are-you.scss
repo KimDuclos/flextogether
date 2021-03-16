@@ -1,53 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 $size1500: "1500px";
 
 .who-are-you-page {
-    border: 1px solid black;
-    padding: 0%;
-    .who-are-you-title {
-        color: white;
-        font-size: 4em;
-        font-family: "Paytone One", sans-serif;
-        padding: 2% 0 0 20%;
+  border: 1px solid black;
+  padding: 0%;
+  .who-are-you-title {
+    color: white;
+    font-size: 4em;
+    font-family: "Paytone One", sans-serif;
+    padding: 2% 0 0 20%;
+  }
+  .who-are-you-instructions {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0 0 0 20%;
+  }
+  .who-are-you-button-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45%;
+    margin: 3% 0 0 38%;
+    @media (max-width: $size1500) {
+      width: 55%;
+      margin: 3% 0 0 32%;
     }
-    .who-are-you-instructions {
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.3em;
-        font-weight: bold;
-        margin: 0 0 0 20%;
+    .who-are-you-btn {
+      padding: 10% 0 0 0;
     }
-    .who-are-you-button-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 45%;
-        margin: 3% 0 0 38%;
-        @media (max-width: $size1500) {
-            width: 55%;
-            margin: 3% 0 0 32%;
-        }
-        :hover {
-            background-color: white;
-            color: black;
-        }
-        .who-are-you-button {
-            padding: 10% 0 0 0;
-        }
-        #who-btn-2 {
-            margin: 0 10% 0 0;
-        }
+    #who-btn-2 {
+      margin: 0 10% 0 0;
     }
-    .who-are-you-prog-button-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 25%;
-        margin: 6% 5% 0 5%;
-        @media (max-width: $size1500) {
-            width: 30%;
-        }
+  }
+  .who-are-you-prog-button-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    margin: 6% 5% 0 5%;
+    @media (max-width: $size1500) {
+      width: 30%;
     }
+  }
 }
