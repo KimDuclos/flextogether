@@ -1,10 +1,15 @@
 import React from "react";
 import "./calendar.scss";
 import calendarBackground from "./assets/calendarBackground.png";
-import Dropdown from "react-dropdown";
 import TimeButton from "./components/time-button.jsx";
 import ProgressButton from "./components/progress-button.jsx";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import Select, { components } from "react-select";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faCaretDown);
 
 const calendarBackgroundStyle = {
   width: "100%",
@@ -33,6 +38,18 @@ const options = [
   },
 ];
 
+const CaretDownIcon = () => {
+  return <FontAwesomeIcon icon="caret-down" />;
+}
+
+const DropdownIdicator = props => {
+  return (
+    <components.DropdownIdicator {...props}>
+      <CaretDownIcon/>
+    </components.DropdownIdicator>
+  );
+}
+
 // set dropdown to eastern
 const defaultOption = options[0];
 
@@ -55,7 +72,7 @@ const times = [
 
 const timeBlocks = times.map((time) => <TimeButton time={time} />);
 
-const Calendar = () => {
+const Calendar = (props) => {
   return (
     <div className="calendar-page" style={calendarBackgroundStyle}>
       <div className="calendar-page-title">When can you exercise?</div>
@@ -73,12 +90,15 @@ const Calendar = () => {
       </div>
       <div className="time-zone-title">Time Zone</div>
       <div className="time-zone-dropdown">
-        <Dropdown
-          className="dropdown"
-          options={options}
-          value={defaultOption}
-          placeholder={"Select an Option"}
-        />
+          <Select
+            className="dropdown"
+            options={options}
+            value={defaultOption}
+            placeholder={"Select an Option"}
+            components = {{ DropdownIdicator }}
+          >
+            <CaretDownIcon className="caret-dropdown" />
+          </Select>
       </div>
       <div className="days">
         <div className="day-titles">
