@@ -50,12 +50,12 @@ const TellMore = () => {
           className="radio-button"
           type="radio"
           value="Email"
-          name="email"
+          name="contact-selection"
         />
         Text{" "}
-        <input className="radio-button" type="radio" value="Text" name="text" />
+        <input className="radio-button" type="radio" value="Text" name="contact-selection" />
         Both{" "}
-        <input className="radio-button" type="radio" value="Both" name="both" />
+        <input className="radio-button" type="radio" value="Both" name="contact-selection" />
       </div>
       <div className="tell-more-prog-buttons">
         <Router>
