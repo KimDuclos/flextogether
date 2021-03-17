@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./level.scss";
 import backgroundImage from "./assets/backgroundImage.png";
 import LevelButton from "./components/level-button.jsx";
@@ -10,7 +10,7 @@ const levelBackgroundStyle = {
   backgroundImage: `url(${backgroundImage})`,
   backgroundSize: "100%",
   margin: "0% 0 0 0",
-  display: "inline-block"
+  display: "inline-block",
 };
 
 const Level = () => {
@@ -25,17 +25,15 @@ const Level = () => {
       <div className="level-buttons">
         <LevelButton text="LOW: 1 hour per week" />
         <LevelButton text="MEDIUM: 3 hours per week" />
-        <LevelButton text="HIGH: 4+ hours per week" />
+        <LevelButton text="HIGH: More than 4 hours per week" />
       </div>
       <div className="level-prog-buttons">
-        <Router>
-          <Link to="/tell-more" style={{ textDecoration: "none" }}>
-            <ProgressButton className="level-back-button" text="BACK" />
-          </Link>
-          <Link to="/calendar" style={{ textDecoration: "none" }}>
-            <ProgressButton className="level-next-button" text="NEXT" />
-          </Link>
-        </Router>
+        <Link to="/tell-more" style={{ textDecoration: "none" }}>
+          <ProgressButton className="level-back-button" text="BACK" />
+        </Link>
+        <Link to="/calendar" style={{ textDecoration: "none" }}>
+          <ProgressButton className="level-next-button" text="NEXT" />
+        </Link>
       </div>
     </div>
   );

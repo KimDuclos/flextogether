@@ -2,7 +2,7 @@ import React from "react";
 import "./thanks.scss";
 import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const thanksBackgroundStyle = {
   width: "100%",
@@ -27,11 +27,9 @@ const Thanks = () => {
         <p>- The Flex Together Team</p>
       </div>
       <div className="thanks-prog-button">
-        <Router>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <ProgressButton text="DONE" />
-          </Link>
-        </Router>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <ProgressButton text="DONE" />
+        </Link>
       </div>
     </div>
   );

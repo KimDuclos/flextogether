@@ -1,6 +1,6 @@
 import React from "react";
 import "./welcome-page.scss";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 
@@ -30,15 +30,13 @@ const WelcomePage = () => {
       <p className="welcome-paragraph">
         Please click the NEXT button to get started!
       </p>
-      <Router>
-        <Link to="/who-are-you" style={{ textDecoration: "none" }}>
-          <ProgressButton
-            className="prog-button"
-            id="welcome-progress-button"
-            text="NEXT"
-          ></ProgressButton>
-        </Link>
-      </Router>
+      <Link to="/who-are-you" style={{ textDecoration: "none" }}>
+        <ProgressButton
+          className="prog-button"
+          id="welcome-progress-button"
+          text="NEXT"
+        ></ProgressButton>
+      </Link>
     </div>
   );
 };

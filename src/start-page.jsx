@@ -1,6 +1,6 @@
 import React from "react";
 import "./start-page.scss";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import startBackgroundImage from "./assets/man-exercising-background.png";
 import ProgressButton from "./components/progress-button.jsx";
 
@@ -17,7 +17,6 @@ const StartPage = () => {
     <div className="start-page" style={startBackgroundStyle}>
       <h1 className="start-page-title">Flex Together</h1>
       <p className="start-page-paragraph">Please click or tap START</p>
-      <Router>
         <Link to="/welcome-page" style={{ textDecoration: "none" }}>
           <ProgressButton
             className="prog-button"
@@ -25,7 +24,6 @@ const StartPage = () => {
             text="START"
           />
         </Link>
-      </Router>
     </div>
   );
 };

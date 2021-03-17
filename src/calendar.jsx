@@ -3,7 +3,7 @@ import "./calendar.scss";
 import calendarBackground from "./assets/calendarBackground.png";
 import TimeButton from "./components/time-button.jsx";
 import ProgressButton from "./components/progress-button.jsx";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Select, { components } from "react-select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
@@ -40,15 +40,15 @@ const options = [
 
 const CaretDownIcon = () => {
   return <FontAwesomeIcon icon="caret-down" />;
-}
+};
 
-const DropdownIdicator = props => {
+const DropdownIdicator = (props) => {
   return (
     <components.DropdownIdicator {...props}>
-      <CaretDownIcon/>
+      <CaretDownIcon />
     </components.DropdownIdicator>
   );
-}
+};
 
 // set dropdown to eastern
 const defaultOption = options[0];
@@ -90,15 +90,15 @@ const Calendar = (props) => {
       </div>
       <div className="time-zone-title">Time Zone</div>
       <div className="time-zone-dropdown">
-          <Select
-            className="dropdown"
-            options={options}
-            value={defaultOption}
-            placeholder={"Select an Option"}
-            components = {{ DropdownIdicator }}
-          >
-            <CaretDownIcon className="caret-dropdown" />
-          </Select>
+        <Select
+          className="dropdown"
+          options={options}
+          value={defaultOption}
+          placeholder={"Select an Option"}
+          components={{ DropdownIdicator }}
+        >
+          <CaretDownIcon className="caret-dropdown" />
+        </Select>
       </div>
       <div className="days">
         <div className="day-titles">
@@ -123,14 +123,12 @@ const Calendar = (props) => {
         </div>
       </div>
       <div className="time-prog-buttons">
-        <Router>
-          <Link to="/level" style={{ textDecoration: "none" }}>
-            <ProgressButton text="BACK" />
-          </Link>
-          <Link to="/thanks" style={{ textDecoration: "none" }}>
-            <ProgressButton text="NEXT" />
-          </Link>
-        </Router>
+        <Link to="/level" style={{ textDecoration: "none" }}>
+          <ProgressButton text="BACK" />
+        </Link>
+        <Link to="/thanks" style={{ textDecoration: "none" }}>
+          <ProgressButton text="NEXT" />
+        </Link>
       </div>
     </div>
   );

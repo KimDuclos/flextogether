@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ProgressButton from "./components/progress-button";
 import "./who-are-you.scss";
 import backgroundImage from "./assets/backgroundImage.png";
@@ -33,22 +33,20 @@ const WhoAreYou = () => {
         ></WhoAreYouButton>
       </div>
       <div className="who-are-you-prog-button-section">
-        <Router>
-          <Link to="/welcome-page" style={{ textDecoration: "none" }}>
-            <ProgressButton
-              className="prog-button"
-              id="who-are-you-back-btn"
-              text="BACK"
-            ></ProgressButton>
-          </Link>
-          <Link to="/tell-more" style={{ textDecoration: "none" }}>
-            <ProgressButton
-              className="prog-button"
-              id="who-are-you-next-button"
-              text="NEXT"
-            ></ProgressButton>
-          </Link>
-        </Router>
+        <Link to="/welcome-page" style={{ textDecoration: "none" }}>
+          <ProgressButton
+            className="prog-button"
+            id="who-are-you-back-btn"
+            text="BACK"
+          ></ProgressButton>
+        </Link>
+        <Link to="/tell-more" style={{ textDecoration: "none" }}>
+          <ProgressButton
+            className="prog-button"
+            id="who-are-you-next-button"
+            text="NEXT"
+          ></ProgressButton>
+        </Link>
       </div>
     </div>
   );
