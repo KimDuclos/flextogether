@@ -1,15 +1,5 @@
 import React from "react";
 import "./tell-more.scss";
-import backgroundImage from "./assets/backgroundImage.png";
-
-const tellMoreBackgroundStyle = {
-  width: "100%",
-  height: "910px",
-  backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "100%",
-  margin: "0% 0 0 0",
-  display: "inline-block",
-};
 
 const txtFieldState = {
   value: "",
