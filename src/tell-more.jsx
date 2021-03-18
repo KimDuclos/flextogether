@@ -1,7 +1,6 @@
 import React from "react";
 import "./tell-more.scss";
 import backgroundImage from "./assets/backgroundImage.png";
-import ProgressButton from "./components/progress-button.jsx";
 
 const tellMoreBackgroundStyle = {
   width: "100%",
@@ -39,12 +38,14 @@ class TellMore extends React.Component {
       fieldName: "Email",
       required: true,
       requiredTxt: "Email is required",
+      formatErrorTxt: "Incorrect email format",
     },
     phone: {
       ...txtFieldState,
       fieldName: "Phone",
       required: false,
       requiredTxt: "Phone is required",
+      formatErrorTxt: "Incorrect phone format",
     },
     allFieldsValid: false,
   };
@@ -107,9 +108,7 @@ class TellMore extends React.Component {
   };
 
   render() {
-    const { name, email, phone, allFieldsValid } = this.state;
-    // const successFormDisplay = allFieldsValid ? "block" : "none";
-    // const inputFormDisplay = !allFieldsValid ? "block" : "none";
+    const { name, email, phone } = this.state;
 
     const renderNameValidationError = name.valid ? (
       ""
@@ -122,7 +121,7 @@ class TellMore extends React.Component {
       ""
     ) : (
       <ErrorValidationLabel
-        txtLbl={email.typeMismatch ? name.formatErrorTxt : email.requiredTxt}
+        txtLbl={email.typeMismatch ? email.formatErrorTxt : email.requiredTxt}
       />
     );
     const renderPhoneValidationError = phone.valid ? (
@@ -148,9 +147,10 @@ class TellMore extends React.Component {
           <form className="contact-form" onSubmit={this.onSubmit} noValidate>
             <input
               className="contact-form-input"
-              type="name"
+              type="text"
               name="name"
               placeholder="Name"
+              pattern="[A-Za-z]"
               required
             />
             <br />
@@ -164,20 +164,22 @@ class TellMore extends React.Component {
               required
             />
             <br />
-            {renderPhoneValidationError}
+            {renderEmailValidationError}
             <br />
             <input
               className="contact-form-input"
               type="tel"
               name="phone"
               placeholder="Phone Number"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               required
             />
             <br />
-            {renderEmailValidationError}
+            {renderPhoneValidationError}
             <br />
             <input type="submit" value="BACK" />
             <input type="submit" value="NEXT" />
+            <br />
           </form>
         </div>
       </div>
