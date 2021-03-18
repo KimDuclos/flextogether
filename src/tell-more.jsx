@@ -1,11 +1,22 @@
 import React from "react";
 import "./tell-more.scss";
+import backgroundImage from "./assets/backgroundImage.png";
+import ProgressButton from "./components/progress-button.jsx";
+
+const tellMoreBackgroundStyle = {
+  width: "100%",
+  height: "910px",
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundSize: "100%",
+  margin: "0% 0 0 0",
+  display: "inline-block",
+};
 
 const txtFieldState = {
   value: "",
   valid: true,
   typeMismatch: false,
-  errMsg: ""
+  errMsg: "",
 };
 
 const ErrorValidationLabel = ({ txtLbl }) => (
@@ -51,7 +62,7 @@ class TellMore extends React.Component {
         return {
           name,
           type,
-          typeMismatch, 
+          typeMismatch,
           value,
           valid: x.checkValidity(),
         };
@@ -92,14 +103,13 @@ class TellMore extends React.Component {
     const formValues = this.reduceFormValues(form.elements);
     const allFieldsValid = this.checkAllFieldsValid(formValues);
 
-
     this.setState({ ...formValues, allFieldsValid }); //we set the state based on the extracted values from Constraint Validation API
   };
 
   render() {
     const { name, email, phone, allFieldsValid } = this.state;
-    const successFormDisplay = allFieldsValid ? "block" : "none";
-    const inputFormDisplay = !allFieldsValid ? "block" : "none";
+    // const successFormDisplay = allFieldsValid ? "block" : "none";
+    // const inputFormDisplay = !allFieldsValid ? "block" : "none";
 
     const renderNameValidationError = name.valid ? (
       ""
@@ -111,34 +121,43 @@ class TellMore extends React.Component {
     const renderEmailValidationError = email.valid ? (
       ""
     ) : (
-      <ErrorValidationLabel txtLbl={email.requiredTxt} />
+      <ErrorValidationLabel
+        txtLbl={email.typeMismatch ? name.formatErrorTxt : email.requiredTxt}
+      />
     );
     const renderPhoneValidationError = phone.valid ? (
       ""
     ) : (
-      <ErrorValidationLabel txtLbl={phone.requiredTxt} />
+      <ErrorValidationLabel
+        txtLbl={phone.typeMismatch ? phone.formatErrorTxt : phone.requiredTxt}
+      />
     );
 
     return (
-      <>
-        <div style={{ display: successFormDisplay }}>
-          <h1 style={{ textAlign: "center" }}>Success!</h1>
-          <p style={{ textAlign: "center" }}>
-            You have successfully submitted a form.
+      <div>
+        <div className="tell-more-page">
+          <h1 className="tell-more-title" style={{ textAlign: "center" }}>
+            Tell us a bit more...
+          </h1>
+          <p className="tell-more-paragraph">
+            {" "}
+            Please enter your name, email, and phone number in the boxes. Select
+            your notification preference. Click "Submit" when after have filled
+            out your info. Then click NEXT.
           </p>
-        </div>
-        <div className="form-input" style={{ display: inputFormDisplay }}>
-          <h1 style={{ textAlign: "center" }}>Tell us a bit more...</h1>
-          <form
-            className="form-inside-input"
-            onSubmit={this.onSubmit}
-            noValidate
-          >
-            <input type="name" name="name" placeholder="Name" required />
+          <form className="contact-form" onSubmit={this.onSubmit} noValidate>
+            <input
+              className="contact-form-input"
+              type="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
             <br />
             {renderNameValidationError}
             <br />
             <input
+              className="contact-form-input"
               type="email"
               name="email"
               placeholder="Email"
@@ -148,6 +167,7 @@ class TellMore extends React.Component {
             {renderPhoneValidationError}
             <br />
             <input
+              className="contact-form-input"
               type="tel"
               name="phone"
               placeholder="Phone Number"
@@ -156,12 +176,11 @@ class TellMore extends React.Component {
             <br />
             {renderEmailValidationError}
             <br />
-
             <input type="submit" value="BACK" />
             <input type="submit" value="NEXT" />
           </form>
         </div>
-      </>
+      </div>
     );
   }
 }
