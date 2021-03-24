@@ -1,180 +1,86 @@
 import React from "react";
+import { useState } from "react";
 import "./tell-more.scss";
 
-const txtFieldState = {
-  value: "",
-  valid: true,
-  typeMismatch: false,
-  errMsg: "",
+const TellMore = () => {
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone1: "",
+    phone2: "",
+    phone3: ""
+  });
+
+  const set = (name) => {
+    return ({ target: { value } }) => {
+      setValues((oldValues) => ({ ...oldValues, [name]: value }));
+    };
+  };
+
+  return (
+    <form>
+      <label>First Name</label>
+      <input
+        value={values.firstName}
+        onChange={set("firstName")}
+        type="text"
+        placeholder="First Name"
+        required
+      />
+      <label>Last Name</label>
+      <input
+        value={values.lastName}
+        onChange={set("lastName")}
+        type="text"
+        placeholder="Last Name"
+        required
+      />
+      <label>Email:</label>
+      <input
+        value={values.email}
+        onChange={set("email")}
+        type="email"
+        placeholder="email@email.com"
+        aria-label="email address"
+        required
+      />
+      <label>Phone Number</label>
+      (
+      <input
+        name="tel1"
+        type="tel"
+        pattern="[0-9]{3}"
+        placeholder="###"
+        aria-label="3-digit area code"
+        size="2"
+        onChange={set("phone")}
+      />
+      )-
+      <input
+        name="tel2"
+        type="tel"
+        pattern="[0-9]{3}"
+        placeholder="###"
+        aria-label="3-digit prefix"
+        size="2"
+        onChange={set("phone")}
+
+      />
+      -
+      <input
+        name="tel3"
+        type="tel"
+        pattern="[0-9]{4}"
+        placeholder="####"
+        aria-label="4-digit number"
+        size="3"
+        onChange={set("phone")}
+      />
+      <button type="submit">BACK</button>
+      <button type="submit">NEXT</button>
+    </form>
+  );
 };
-
-const ErrorValidationLabel = ({ txtLbl }) => (
-  <label htmlFor="" style={{ color: "red" }}>
-    {txtLbl}
-  </label>
-);
-
-class TellMore extends React.Component {
-  state = {
-    name: {
-      ...txtFieldState,
-      fieldName: "Name",
-      required: true,
-      requiredTxt: "Name is required",
-      formatErrorTxt: "Incorrect name format",
-    },
-    email: {
-      ...txtFieldState,
-      fieldName: "Email",
-      required: true,
-      requiredTxt: "Email is required",
-      formatErrorTxt: "Incorrect email format",
-    },
-    phone: {
-      ...txtFieldState,
-      fieldName: "Phone",
-      required: false,
-      requiredTxt: "Phone is required",
-      formatErrorTxt: "Incorrect phone format",
-    },
-    allFieldsValid: false,
-  };
-
-  reduceFormValues = (formElements) => {
-    const arrElements = Array.prototype.slice.call(formElements); // convert elements/inputs into an array found inside form element
-
-    // extract specific properties in Constraint Validation API using this code snippet
-    const formValues = arrElements
-      .filter((elem) => elem.name.length > 0)
-      .map((x) => {
-        const { typeMismatch } = x.validity;
-        const { name, type, value } = x;
-
-        return {
-          name,
-          type,
-          typeMismatch,
-          value,
-          valid: x.checkValidity(),
-        };
-      })
-      .reduce((acc, currVal) => {
-        const { value, valid, typeMismatch } = currVal;
-        const { fieldName, requiredTxt, formatErrorTxt } = this.state[
-          currVal.name
-        ];
-
-        // map these properties back to state so we use reducer
-        acc[currVal.name] = {
-          value,
-          valid,
-          typeMismatch,
-          fieldName,
-          requiredTxt,
-          formatErrorTxt,
-        };
-
-        return acc;
-      }, {});
-
-    return formValues;
-  };
-
-  checkAllFieldsValid = (formValues) => {
-    return !Object.keys(formValues)
-      .map((x) => formValues[x])
-      .some((field) => !field.valid);
-  };
-
-  onSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-
-    // extract specific properties in Constraint Validation API using this code snippet
-    const formValues = this.reduceFormValues(form.elements);
-    const allFieldsValid = this.checkAllFieldsValid(formValues);
-
-    this.setState({ ...formValues, allFieldsValid }); //we set the state based on the extracted values from Constraint Validation API
-  };
-
-  render() {
-    const { name, email, phone } = this.state;
-
-    const renderNameValidationError = name.valid ? (
-      ""
-    ) : (
-      <ErrorValidationLabel
-        txtLbl={name.typeMismatch ? name.formatErrorTxt : name.requiredTxt}
-      />
-    );
-    const renderEmailValidationError = email.valid ? (
-      ""
-    ) : (
-      <ErrorValidationLabel
-        txtLbl={email.typeMismatch ? email.formatErrorTxt : email.requiredTxt}
-      />
-    );
-    const renderPhoneValidationError = phone.valid ? (
-      ""
-    ) : (
-      <ErrorValidationLabel
-        txtLbl={phone.typeMismatch ? phone.formatErrorTxt : phone.requiredTxt}
-      />
-    );
-
-    return (
-      <div>
-        <div className="tell-more-page">
-          <h1 className="tell-more-title" style={{ textAlign: "center" }}>
-            Tell us a bit more...
-          </h1>
-          <p className="tell-more-paragraph">
-            {" "}
-            Please enter your name, email, and phone number in the boxes. Select
-            your notification preference. Click "Submit" when after have filled
-            out your info. Then click NEXT.
-          </p>
-          <form className="contact-form" onSubmit={this.onSubmit} noValidate>
-            <input
-              className="contact-form-input"
-              type="text"
-              name="name"
-              placeholder="Name"
-              pattern="[A-Za-z]"
-              required
-            />
-            <br />
-            {renderNameValidationError}
-            <br />
-            <input
-              className="contact-form-input"
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-            />
-            <br />
-            {renderEmailValidationError}
-            <br />
-            <input
-              className="contact-form-input"
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required
-            />
-            <br />
-            {renderPhoneValidationError}
-            <br />
-            <input type="submit" value="BACK" />
-            <input type="submit" value="NEXT" />
-            <br />
-          </form>
-        </div>
-      </div>
-    );
-  }
-}
 
 export default TellMore;
