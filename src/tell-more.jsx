@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import ProgressButton from "./components/progress-button.jsx";
 import "./tell-more.scss";
 
 export default function TellMore() {
@@ -11,6 +12,9 @@ export default function TellMore() {
 
   return (
     <div className="tell-more-page">
+      <div className="tell-more-title">
+        Tell us a bit more...
+      </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contact-form">
           <label>First Name</label>
@@ -66,8 +70,8 @@ export default function TellMore() {
           <input type="radio" value="email" name="notificationMethod" checked /> Email
           <input type="radio" value="phone" name="notificationMethod" /> Phone
           <input type="radio" value="both" name="notificationMethod" /> Both
-          <button type="submit">BACK</button>
-          <button type="submit">NEXT</button>
+          <ProgressButton type="submit" text="BACK" />
+          <ProgressButton type="submit" text="NEXT" />
         </div>
       </form>
     </div>
