@@ -42,11 +42,11 @@ export default function TellMore() {
               },
             })}
           />
-           {errors.lastName && (
+          {errors.lastName && (
             <p className="errorMsg">{errors.lastName.message}</p>
           )}
-          </div>
-         <div className="contact-form">
+        </div>
+        <div className="contact-form">
           <label>Last Name</label>
           <input
             type="text"
@@ -59,12 +59,13 @@ export default function TellMore() {
               },
             })}
           />
-           {errors.email && (
-            <p className="errorMsg">{errors.email.message}</p>
-          )}
-          </div>
+          {errors.email && <p className="errorMsg">{errors.email.message}</p>}
+        </div>
         <div className="contact-form">
-          <label></label>
+          <label>Please click your prefered method of contact.</label>
+          <input type="radio" value="email" name="notificationMethod" checked /> Email
+          <input type="radio" value="phone" name="notificationMethod" /> Phone
+          <input type="radio" value="both" name="notificationMethod" /> Both
           <button type="submit">BACK</button>
           <button type="submit">NEXT</button>
         </div>
