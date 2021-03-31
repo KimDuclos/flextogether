@@ -12,9 +12,7 @@ export default function TellMore() {
 
   return (
     <div className="tell-more-page">
-      <div className="tell-more-title">
-        Tell us a bit more...
-      </div>
+      <div className="tell-more-title">Tell us a bit more...</div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contact-form">
           <label>First Name</label>
@@ -67,9 +65,12 @@ export default function TellMore() {
         </div>
         <div className="contact-form">
           <label>Please click your prefered method of contact.</label>
-          <input type="radio" value="email" name="notificationMethod" checked /> Email
+          <input type="radio" value="email" name="notificationMethod" checked />
+          Email
           <input type="radio" value="phone" name="notificationMethod" /> Phone
           <input type="radio" value="both" name="notificationMethod" /> Both
+        </div>
+        <div className="tell-more-prog-buttons">
           <ProgressButton type="submit" text="BACK" />
           <ProgressButton type="submit" text="NEXT" />
         </div>
