@@ -1,13 +1,46 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import ProgressButton from "./components/progress-button.jsx";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+// import ProgressButton from "./components/progress-button.jsx";
 import "./tell-more.scss";
 
-export default function TellMore() {
+const TellMore = () => {
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+  };
+
+  const [disabled, setDisabled] = useState(true); // set submit to initially disabled
+
+  // set disabled submit if form not valid
+  useEffect(() => {
+    console.log(values);
+    if (
+      values.firstName !== "" &&
+      values.lastName !== "" &&
+      values.email !== "" &&
+      values.phone !== ""
+    ) {
+      setDisabled(false);
+      console.log("button is disabled");
+    } else {
+      setDisabled(true);
+    }
+  }, [values]);
+
+  const set = (userInput) => {
+    return ({ target: { value } }) => {
+      setValues((oldValues) => ({ ...oldValues, [userInput]: value }));
+    };
   };
 
   return (
@@ -19,6 +52,7 @@ export default function TellMore() {
           <input
             type="text"
             name="firstName"
+            onChange={set("firstName")}
             ref={register({
               required: "First Name is required.",
               pattern: {
@@ -36,6 +70,7 @@ export default function TellMore() {
           <input
             type="text"
             name="lastName"
+            onChange={set("lastName")}
             ref={register({
               required: "Last Name is required.",
               pattern: {
@@ -49,10 +84,11 @@ export default function TellMore() {
           )}
         </div>
         <div className="contact-form">
-          <label>Last Name</label>
+          <label>Email</label>
           <input
             type="text"
             name="email"
+            onChange={set("email")}
             ref={register({
               required: "Email is required.",
               pattern: {
@@ -70,11 +106,27 @@ export default function TellMore() {
           <input type="radio" value="phone" name="notificationMethod" /> Phone
           <input type="radio" value="both" name="notificationMethod" /> Both
         </div>
-        <div className="tell-more-prog-buttons">
-          <ProgressButton type="submit" text="BACK" />
-          <ProgressButton type="submit" text="NEXT" />
+        <div>
+          <Link to="./who-are-you">
+            <button
+              type="submit"
+              disabled={disabled}
+              text="BACK"
+              className="tell-more-progress-button"
+            />
+          </Link>
+          <Link to="./level">
+            <button
+              type="submit"
+              disabled={disabled}
+              text="NEXT"
+              className="tell-more-progress-button"
+            />
+          </Link>
         </div>
       </form>
     </div>
   );
-}
+};
+
+export default TellMore;

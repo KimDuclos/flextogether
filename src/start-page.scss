@@ -1,27 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 $size1000: "1000px";
 
 .start-page {
+  background-color: #533f7e;
+  background-repeat: no-repeat;
+  background-image: url("./assets/startPageBackground.svg");
+  background-size: 120% 120%;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  height: 930px;
   border: 1px solid black;
   .start-page-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 6% 0 0 0;
+    text-align: left;
+    width: 35%;
+    margin: 12% 0 0 40%;
   }
   .start-page-paragraph {
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-size: 2em;
+    text-align: left;
+    margin: 20% 0 0 7%;
   }
-  // .prog-button:active {
-  //   border: 4px solid green;
-  // }
   #start-progress-button {
-    margin: 22% 0 0 10%;
+    margin: 2% 66% 0 0;
     @media (max-width: $size1000) {
       margin: 32% auto 0 auto;
     }
