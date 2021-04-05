@@ -20,6 +20,10 @@ $size1000: "1000px";
     text-align: left;
     width: 35%;
     margin: 12% 0 0 40%;
+    @media (max-width: $size1000) {
+      margin: 25% 0 0 30%;
+      text-align: center;
+    }
   }
   .start-page-paragraph {
     color: white;
@@ -31,8 +35,14 @@ $size1000: "1000px";
     @media (max-width: $size1500) {
       margin: 25% 0 0 5%;
     }
+    @media (max-width: $size1000) {
+      margin: 30% 0 0 5%;
+    }
   }
   #start-progress-button {
     margin: 2% 66% 0 0;
+    @media (max-width: $size1000) {
+      margin: 2% 50% 0 0;
+    }
   }
 }
