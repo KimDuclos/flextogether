@@ -3,6 +3,7 @@
 
 $size1500: "1500px";
 $size1000: "1000px";
+$size800: "800px";
 
 .start-page {
   background-color: #533f7e;
@@ -24,6 +25,10 @@ $size1000: "1000px";
       margin: 25% 0 0 30%;
       text-align: center;
     }
+    @media (max-width: $size800) {
+      width: 100%;
+      margin: 15% 5% 0 0%
+    }
   }
   .start-page-paragraph {
     color: white;
@@ -38,11 +43,17 @@ $size1000: "1000px";
     @media (max-width: $size1000) {
       margin: 30% 0 0 5%;
     }
+    @media (max-width: $size800) {
+      margin: 70% 0 0 7%;
+    }
   }
   #start-progress-button {
     margin: 2% 66% 0 0;
     @media (max-width: $size1000) {
-      margin: 2% 50% 0 0;
+      margin: 2% 51% 0 0;
+    }
+    @media (max-width: $size800) {
+      margin: 2% 39% 0 0;
     }
   }
 }
