@@ -5,6 +5,7 @@ $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
 $size500: "500px";
+$size300: "300px";
 
 .start-page {
   background-color: #533f7e;
@@ -33,6 +34,10 @@ $size500: "500px";
     @media (max-width: $size500) {
       margin: 30% 0 0 0;
     }
+    @media (max-width: $size300) {
+      font-size: 3em;
+      margin: 75% 0 0 0;
+    }
   }
   .start-page-paragraph {
     color: white;
@@ -53,6 +58,10 @@ $size500: "500px";
     @media (max-width: $size500) {
       margin: 105% 0 0 0;
       text-align: center;
+    }
+    @media (max-width: $size300) {
+      margin: 125% 0 0 0;
+      font-size: 1.5em;
     }
   }
   #start-progress-button {
