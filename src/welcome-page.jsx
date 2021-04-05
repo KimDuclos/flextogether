@@ -4,17 +4,6 @@ import { Link } from "react-router-dom";
 import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 
-// const welcomeBackgroundStyle = {
-//   backgroundSize: "auto 150%",
-//   display: "inline-block",
-//   width: "100%",
-//   height: "910px",
-//   backgroundImage: `url(${backgroundImage})`,
-//   margin: "0%",
-// };
-
-// style={welcomeBackgroundStyle}
-
 const WelcomePage = () => {
   return (
     <div className="welcome-page" >

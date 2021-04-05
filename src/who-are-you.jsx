@@ -4,18 +4,20 @@ import "./who-are-you.scss";
 import backgroundImage from "./assets/backgroundImage.png";
 import WhoAreYouButton from "./components/who-are-you-button.jsx";
 
-const whoAreYouBackgroundStyle = {
-  width: "100%",
-  height: "890px",
-  backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "100%",
-  margin: "0% 0 0 0",
-  backgroundRepeat: "no-repeat",
-};
+// const whoAreYouBackgroundStyle = {
+//   width: "100%",
+//   height: "890px",
+//   backgroundImage: `url(${backgroundImage})`,
+//   backgroundSize: "100%",
+//   margin: "0% 0 0 0",
+//   backgroundRepeat: "no-repeat",
+// };
+
+// style={whoAreYouBackgroundStyle}
 
 const WhoAreYou = () => {
   return (
-    <div className="who-are-you-page" style={whoAreYouBackgroundStyle}>
+    <div className="who-are-you-page" >
       <h1 className="who-are-you-title">Who are You?</h1>
       <p className="who-are-you-instructions">
         Please click your choice. Then click NEXT.

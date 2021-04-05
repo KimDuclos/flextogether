@@ -4,27 +4,34 @@
 $size1500: "1500px";
 
 .who-are-you-page {
-  border: 1px solid black;
-  padding: 0%;
+  background-color: #a68227;
+  background-image: url("./assets/pageBackground.svg");
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  margin: 0%;
+  height: 930px;
   .who-are-you-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 2% 0 0 20%;
+    margin: 0% 0 0 45%;
+    padding: 10% 0 0 0;
   }
   .who-are-you-instructions {
     color: white;
     font-family: "Roboto", sans-serif;
     font-size: 1.3em;
     font-weight: bold;
-    margin: 0 0 0 20%;
+    margin: 1% 0 0 44%;
   }
   .who-are-you-button-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 45%;
-    margin: 3% 0 0 38%;
+    margin: 3% 0 0 50%;
     @media (max-width: $size1500) {
       width: 55%;
       margin: 3% 0 0 32%;
@@ -41,7 +48,7 @@ $size1500: "1500px";
     flex-direction: row;
     justify-content: space-between;
     width: 25%;
-    margin: 6% 5% 0 5%;
+    margin: 10% 5% 0 5%;
     @media (max-width: $size1500) {
       width: 30%;
     }
