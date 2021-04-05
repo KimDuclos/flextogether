@@ -4,17 +4,6 @@ import "./who-are-you.scss";
 import backgroundImage from "./assets/backgroundImage.png";
 import WhoAreYouButton from "./components/who-are-you-button.jsx";
 
-// const whoAreYouBackgroundStyle = {
-//   width: "100%",
-//   height: "890px",
-//   backgroundImage: `url(${backgroundImage})`,
-//   backgroundSize: "100%",
-//   margin: "0% 0 0 0",
-//   backgroundRepeat: "no-repeat",
-// };
-
-// style={whoAreYouBackgroundStyle}
-
 const WhoAreYou = () => {
   return (
     <div className="who-are-you-page" >
