@@ -4,18 +4,20 @@ import { Link } from "react-router-dom";
 import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 
-const welcomeBackgroundStyle = {
-  backgroundSize: "auto 150%",
-  display: "inline-block",
-  width: "100%",
-  height: "910px",
-  backgroundImage: `url(${backgroundImage})`,
-  margin: "0%",
-};
+// const welcomeBackgroundStyle = {
+//   backgroundSize: "auto 150%",
+//   display: "inline-block",
+//   width: "100%",
+//   height: "910px",
+//   backgroundImage: `url(${backgroundImage})`,
+//   margin: "0%",
+// };
+
+// style={welcomeBackgroundStyle}
 
 const WelcomePage = () => {
   return (
-    <div className="welcome-page" style={welcomeBackgroundStyle}>
+    <div className="welcome-page" >
       <h1 className="welcome-page-title">Welcome to Flex Together</h1>
       <p className="welcome-paragraph">We’re so glad you joined our team.</p>
       <p className="welcome-paragraph">

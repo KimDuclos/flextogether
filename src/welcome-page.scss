@@ -4,11 +4,20 @@
 $size800: "800px";
 
 .welcome-page {
+    background-color: #A68227;
+    background-image: url("./assets/pageBackground.svg");
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    margin: 0%;
+    height: 930px;
     .welcome-page-title {
         color: white;
         font-size: 4em;
         font-family: "Paytone One", sans-serif;
-        padding: 2% 0 0 30%;
+        margin: 0% 0 0 45%;
+        padding: 10% 0 0 0;
         @media (max-width: $size800) {
             padding: 2% auto 0 auto;
         }
@@ -20,10 +29,10 @@ $size800: "800px";
         font-size: 1.3em;
         font-weight: bold;
         line-height: 1.6em;
-        margin: 0 0 1% 50%;
+        margin: 2% 0 0 51%;
         text-align: left;
     }
     #welcome-progress-button {
-        margin: 8% 0 0 10%;
+        margin: 5% 70% 0 0;
     }
 }
