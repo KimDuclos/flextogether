@@ -5,6 +5,7 @@ $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
 $size500: "500px";
+$sizeiPhone: "375px";
 $size300: "300px";
 
 .start-page {
@@ -16,6 +17,9 @@ $size300: "300px";
   background-position-y: 0%;
   height: 930px;
   border: 1px solid black;
+  @media (max-width: $sizeiPhone) {
+    height: 810px;
+  }
   .start-page-title {
     color: white;
     font-size: 4em;
@@ -33,6 +37,9 @@ $size300: "300px";
     }
     @media (max-width: $size500) {
       margin: 30% 0 0 0;
+    }
+    @media (max-width: $sizeiPhone) {
+      margin: 20% 0 0 0;
     }
     @media (max-width: $size300) {
       font-size: 3em;
@@ -58,6 +65,10 @@ $size300: "300px";
     @media (max-width: $size500) {
       margin: 105% 0 0 0;
       text-align: center;
+    }
+    @media (max-width: $sizeiPhone) {
+      font-size: 1.5em;
+      margin: 100% 0 0 0;
     }
     @media (max-width: $size300) {
       margin: 125% 0 0 0;
