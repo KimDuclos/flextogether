@@ -6,7 +6,6 @@ $size1000: "1000px";
 $size800: "800px";
 $size500: "500px";
 $sizeiPhone: "375px";
-$size300: "300px";
 
 .start-page {
   background-color: #533f7e;
@@ -41,10 +40,6 @@ $size300: "300px";
     @media (max-width: $sizeiPhone) {
       margin: 20% 0 0 0;
     }
-    @media (max-width: $size300) {
-      font-size: 3em;
-      margin: 75% 0 0 0;
-    }
   }
   .start-page-paragraph {
     color: white;
@@ -69,10 +64,6 @@ $size300: "300px";
     @media (max-width: $sizeiPhone) {
       font-size: 1.5em;
       margin: 100% 0 0 0;
-    }
-    @media (max-width: $size300) {
-      margin: 125% 0 0 0;
-      font-size: 1.5em;
     }
   }
   #start-progress-button {

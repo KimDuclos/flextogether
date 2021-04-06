@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 $size1500: "1500px";
+$size1000: "1000px";
+$size800: "800px";
+$sizeiPhone: "375px";
 
 .who-are-you-page {
   background-color: #a68227;
@@ -12,12 +15,24 @@ $size1500: "1500px";
   background-position-y: 0%;
   margin: 0%;
   height: 930px;
+  @media (max-width: $sizeiPhone) {
+    height: auto;
+  }
   .who-are-you-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
     margin: 0% 0 0 45%;
     padding: 10% 0 0 0;
+    @media (max-width: $size1500) {
+      margin: 0 0 0 40%;
+    }
+    @media (max-width: $size1000) {
+      margin: 0 auto;
+    }
+    @media (max-width: $sizeiPhone) {
+      font-size: 3em;
+    }
   }
   .who-are-you-instructions {
     color: white;
@@ -25,6 +40,15 @@ $size1500: "1500px";
     font-size: 1.3em;
     font-weight: bold;
     margin: 1% 0 0 44%;
+    @media (max-width: $size1500) {
+      margin: 0 0 0 40%;
+    }
+    @media (max-width: $size1000) {
+      margin: 0 auto;
+    }
+    @media (max-width: $sizeiPhone) {
+      font-size: 1.2em;
+    }
   }
   .who-are-you-button-section {
     display: flex;
@@ -34,10 +58,25 @@ $size1500: "1500px";
     margin: 3% 0 0 50%;
     @media (max-width: $size1500) {
       width: 55%;
-      margin: 3% 0 0 32%;
+      margin: 5% 0 0 40%;
+    }
+    @media (max-width: $size1000) {
+      width: 80%;
+      margin: 5% auto;
+    }
+    @media (max-width: $size800) {
+      width: 100%;
+    }
+    @media (max-width: $sizeiPhone) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
     .who-are-you-btn {
-      padding: 10% 0 0 0;
+      padding: 10% 0 10% 0;
+      @media (max-width: $sizeiPhone) {
+        margin: auto;
+      }
     }
     #who-btn-2 {
       margin: 0 10% 0 0;
@@ -48,9 +87,24 @@ $size1500: "1500px";
     flex-direction: row;
     justify-content: space-between;
     width: 25%;
-    margin: 10% 5% 0 5%;
+    margin: 2% 5% 0 5%;
     @media (max-width: $size1500) {
       width: 30%;
+    }
+    @media (max-width: $size1000) {
+      width: 45%;
+      margin: 20% auto 0 auto;
+    }
+    @media (max-width: $size800) {
+      width: 60%;
+    }
+    @media (max-width: $sizeiPhone) {
+      margin: 0% auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .prog-button {
+      margin: 0 0 10% 0;
     }
   }
 }
