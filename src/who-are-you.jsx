@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import ProgressButton from "./components/progress-button";
 import "./who-are-you.scss";
-import backgroundImage from "./assets/backgroundImage.png";
 import WhoAreYouButton from "./components/who-are-you-button.jsx";
 
 const WhoAreYou = () => {

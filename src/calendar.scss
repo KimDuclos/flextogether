@@ -4,11 +4,19 @@
 $size1500: "1500px";
 
 .calendar-page {
+  background-color: #a68227;
+  background-image: url("./assets/pageBackground.svg");
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  margin: 0%;
+  height: auto;
   .calendar-page-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 2% 0 0 19%;
+    padding: 10% auto 0 auto;
   }
   .calendar-page-paragraph {
     color: white;
@@ -17,7 +25,7 @@ $size1500: "1500px";
     font-size: 1.3em;
     font-weight: bold;
     line-height: 1.6em;
-    margin: 0 0 1% 40%;
+    margin: 0 auto 3% auto;
     text-align: left;
   }
   .time-zone-title {
@@ -27,7 +35,7 @@ $size1500: "1500px";
     font-size: 2em;
     font-weight: bold;
     line-height: 1.6em;
-    margin: 2% auto 0 auto;
+    margin: 0 auto;
   }
   .dropdown {
     width: 20%;
@@ -67,7 +75,8 @@ $size1500: "1500px";
     flex-direction: row;
     justify-content: space-between;
     width: 25%;
-    margin: 6% 5% 0 5%;
+    margin: 6% auto 0 auto;
+    padding: 0 0 5% 0;
     @media (max-width: $size1500) {
       width: 30%;
     }

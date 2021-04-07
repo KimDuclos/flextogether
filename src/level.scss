@@ -2,13 +2,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 $size1500: "1500px";
+$size1000: "1000px";
 
 .level-page {
+  background-color: #a68227;
+  background-image: url("./assets/pageBackground.svg");
+  background-size: 120% 135%;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  margin: 0%;
+  height: 1000px;
   .level-page-title {
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 2% 0 0 30%;
+    margin: 0% 0 0 0;
+    padding: 10% 0 2% 35%;
+    @media (max-width: $size1500) {
+      padding: 2% 0% 0 0;
+    }
+    @media (max-width: $size1000) {
+      padding: 20%;
+    }
   }
   .level-page-paragraph {
     color: white;
@@ -17,21 +33,36 @@ $size1500: "1500px";
     font-size: 1.3em;
     font-weight: bold;
     line-height: 1.6em;
-    margin: 0 0 1% 50%;
-    text-align: left;
+    margin: 0 0 1% 52%;
+    text-align: center;
+    @media (max-width: $size1500) {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @media (max-width: $size1000) {
+      width: 90%;
+    }
   }
   .level-buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 60%;
-    margin: 4% 0 0 33%;
+    margin: 4% 0 0 38%;
     @media (max-width: $size1500) {
-      width: 75%;
-      margin: 4% 0 0 23%;
+      width: 80%;
+      margin: 4% auto;
+    }
+    @media (max-width: $size1000) {
+      display: flex;
+      flex-direction: column;
     }
     .lvl-btn {
       padding: 10% 0 0 0;
+    }
+    .levelButton {
+      margin: 0 auto 5% auto;
     }
   }
   .level-prog-buttons {
@@ -39,9 +70,14 @@ $size1500: "1500px";
     flex-direction: row;
     justify-content: space-between;
     width: 25%;
-    margin: 6% 5% 0 5%;
+    margin: 2% 5% 0 5%;
     @media (max-width: $size1500) {
       width: 30%;
+      margin: 0 auto;
+    }
+    @media (max-width: $size1000) {
+      width: 45%;
+      padding: 0 auto 20% auto;
     }
   }
 }

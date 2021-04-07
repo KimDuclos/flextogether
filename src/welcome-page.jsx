@@ -1,7 +1,6 @@
 import React from "react";
 import "./welcome-page.scss";
 import { Link } from "react-router-dom";
-import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 
 const WelcomePage = () => {
@@ -19,7 +18,7 @@ const WelcomePage = () => {
         availability, and your fitness level.
       </p>
       <p className="welcome-paragraph">
-        Please click the NEXT button to get started!
+        Please click or tap the NEXT button to get started!
       </p>
       <Link to="/who-are-you" style={{ textDecoration: "none" }}>
         <ProgressButton

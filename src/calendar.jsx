@@ -1,6 +1,5 @@
 import React from "react";
 import "./calendar.scss";
-import calendarBackground from "./assets/calendarBackground.png";
 import TimeButton from "./components/time-button.jsx";
 import ProgressButton from "./components/progress-button.jsx";
 import { Link } from "react-router-dom";
@@ -10,14 +9,6 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(faCaretDown);
-
-const calendarBackgroundStyle = {
-  width: "100%",
-  height: "1700px",
-  backgroundImage: `url(${calendarBackground})`,
-  backgroundSize: "cover",
-  margin: "0% 0 0 0",
-};
 
 const options = [
   {
@@ -44,9 +35,9 @@ const CaretDownIcon = () => {
 
 const DropdownIdicator = (props) => {
   return (
-    <components.DropdownIdicator {...props}>
+    <components.DropdownIndicator {...props}>
       <CaretDownIcon />
-    </components.DropdownIdicator>
+    </components.DropdownIndicator>
   );
 };
 
@@ -74,7 +65,7 @@ const timeBlocks = times.map((time) => <TimeButton time={time} />);
 
 const Calendar = (props) => {
   return (
-    <div className="calendar-page" style={calendarBackgroundStyle}>
+    <div className="calendar-page">
       <div className="calendar-page-title">When can you exercise?</div>
       <div className="calendar-page-paragraph">
         <p>
