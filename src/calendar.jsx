@@ -1,6 +1,7 @@
 import React from "react";
 import "./calendar.scss";
 import TimeButton from "./components/time-button.jsx";
+import TimeDropDown from "./components/time-dropdown.jsx";
 import ProgressButton from "./components/progress-button.jsx";
 import { Link } from "react-router-dom";
 import Select, { components } from "react-select";
@@ -33,7 +34,7 @@ const CaretDownIcon = () => {
   return <FontAwesomeIcon icon="caret-down" />;
 };
 
-const DropdownIdicator = (props) => {
+const DropdownIndicator = (props) => {
   return (
     <components.DropdownIndicator {...props}>
       <CaretDownIcon />
@@ -86,7 +87,7 @@ const Calendar = (props) => {
           options={options}
           value={defaultOption}
           placeholder={"Select an Option"}
-          components={{ DropdownIdicator }}
+          components={{ DropdownIndicator }}
         >
           <CaretDownIcon className="caret-dropdown" />
         </Select>
@@ -114,6 +115,13 @@ const Calendar = (props) => {
         </div>
       </div>
       <div className="time-prog-buttons">
+        <TimeDropDown />
+        <TimeDropDown />
+        <TimeDropDown />
+        <TimeDropDown />
+        <TimeDropDown />
+        <TimeDropDown />
+        <TimeDropDown />
         <Link to="/level" style={{ textDecoration: "none" }}>
           <ProgressButton text="BACK" />
         </Link>

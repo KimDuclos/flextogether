@@ -9150,6 +9150,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-multiple-select-dropdown-lite@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-multiple-select-dropdown-lite/-/react-multiple-select-dropdown-lite-2.0.4.tgz#51131b6fa36b7d78a340ddc16cc440be80e47f20"
+  integrity sha512-pGgimObDz3zSQhafgr++ydQY0VYZeSPq9xMuT9NLYWrysFIjBmsZq99aGThbvhxeX/v7pYgzkfzZr8rS5yEE4w==
+
 react-phone-number-input@^3.1.17:
   version "3.1.17"
   resolved "https://registry.yarnpkg.com/react-phone-number-input/-/react-phone-number-input-3.1.17.tgz#5e34966fda56a83353c7277af8161ebd8416de18"

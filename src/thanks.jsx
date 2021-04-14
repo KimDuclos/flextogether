@@ -24,7 +24,7 @@ const Thanks = () => {
           We'll review your companion matches and send you an email with your
           assigned time(s)!
         </p>
-        <p>- The Flex Together Team</p>
+        <p>The Flex Together Team</p>
       </div>
       <div className="thanks-prog-button">
         <Link to="/" style={{ textDecoration: "none" }}>

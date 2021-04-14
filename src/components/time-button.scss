@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+$size1000: "1000px";
+$size800: "800px";
+$size375: "375px";
+
 .time-btns {
   background-color: black;
   color: white;
@@ -12,6 +16,17 @@
   margin: 10% 0 0 0;
   display: flex;
   align-items: center;
+  @media (max-width: $size1000) {
+    font-size: 1.2em;
+    width: 120px;
+  }
+  @media (max-width: $size800) {
+    font-size: 1em;
+    width: 90px;
+  }
+  @media (max-width: $size375) {
+    display: none;
+  }
   cursor: pointer;
   .time-text {
     width: 100%;
