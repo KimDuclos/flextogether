@@ -2,8 +2,33 @@ import { Link } from "react-router-dom";
 import ProgressButton from "./components/progress-button";
 import "./who-are-you.scss";
 import WhoAreYouButton from "./components/who-are-you-button.jsx";
+import { useState } from "react/cjs/react.development";
 
 const WhoAreYou = () => {
+  const [selectedMe, setSelectedMe] = useState(false);
+  const [selectedComp, setSelectedComp] = useState(false);
+
+  const onSelect = (who) => {
+    console.log("selected");
+    if (!selectedMe && !selectedComp) {
+      if (who === "me") {
+        setSelectedMe(true);
+      } else if (who === "comp") {
+        setSelectedComp(true);
+      }
+    } else if (!selectedMe && selectedComp) {
+      if (who === "me") {
+        setSelectedMe(true);
+        setSelectedComp(false);
+      }
+    } else if (selectedMe && !selectedComp) {
+      if (who === "comp") {
+        setSelectedMe(false);
+        setSelectedComp(true);
+      }
+    }
+  };
+
   return (
     <div className="who-are-you-page">
       <h1 className="who-are-you-title">Who are You?</h1>
@@ -15,12 +40,16 @@ const WhoAreYou = () => {
           <WhoAreYouButton
             id="who-btn-1"
             text="I am a senior looking for a fitness companion."
+            selected={selectedMe}
+            onClick={() => onSelect("me")}
           ></WhoAreYouButton>
         </div>
         <div className="who-are-you-btn">
           <WhoAreYouButton
             id="who-btn-2"
             text="I would like to be a fitness companion for a senior"
+            selected={selectedComp}
+            onClick={() => onSelect("comp")}
           ></WhoAreYouButton>
         </div>
       </div>
@@ -33,7 +62,11 @@ const WhoAreYou = () => {
             ></ProgressButton>
           </div>
         </Link>
-        <Link to="/tell-more" style={{ textDecoration: "none" }}>
+        <Link
+          to="/tell-more"
+          style={{ textDecoration: "none" }}
+          disabled={!selectedMe && !selectedComp}
+        >
           <div className="prog-button">
             <ProgressButton
               id="who-are-you-next-button"
