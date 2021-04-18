@@ -7,6 +7,7 @@ const ProgressButton = (props) => {
       className="base-prog-button"
       id={props.id}
       disabled={props.disabled}
+      onClick={props.onClick}
     >
       {props.text}
     </button>

@@ -2,11 +2,13 @@ import { Link } from "react-router-dom";
 import ProgressButton from "./components/progress-button";
 import "./who-are-you.scss";
 import WhoAreYouButton from "./components/who-are-you-button.jsx";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const WhoAreYou = () => {
   const [selectedMe, setSelectedMe] = useState(false);
   const [selectedComp, setSelectedComp] = useState(false);
+  const { push } = useHistory();
 
   const onSelect = (who) => {
     console.log("selected");
@@ -62,18 +64,16 @@ const WhoAreYou = () => {
             ></ProgressButton>
           </div>
         </Link>
-        <Link
-          to="/tell-more"
-          style={{ textDecoration: "none" }}
-          disabled={!selectedMe && !selectedComp}
-        >
-          <div className="prog-button">
-            <ProgressButton
-              id="who-are-you-next-button"
-              text="NEXT"
-            ></ProgressButton>
-          </div>
-        </Link>
+        <div className="prog-button">
+          <ProgressButton
+            id="who-are-you-next-button"
+            text="NEXT"
+            disabled={!selectedMe && !selectedComp}
+            onClick= {() => {
+              push("/tell-more");
+            }}
+          ></ProgressButton>
+        </div>
       </div>
     </div>
   );
