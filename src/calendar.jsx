@@ -114,14 +114,38 @@ const Calendar = (props) => {
           <div className="time-picker-column">{timeBlocks}</div>
         </div>
       </div>
+      <div className="time-dropdowns">
+        <div className="drop-menu">
+          <h3 className="drop-title">Monday</h3>
+          <TimeDropDown />
+        </div>
+        <div className="drop-menu">
+          <h3 className="drop-title">Tuesday</h3>
+          <TimeDropDown />
+        </div>
+        <div className="drop-menu">
+          <h3 className="drop-title">Wednesday</h3>
+          <TimeDropDown />
+        </div>
+        <div className="drop-menu">
+          <h3 className="drop-title">Thursday</h3>
+          <TimeDropDown />
+        </div>
+        <div className="drop-menu">
+          <h3 className="drop-title">Friday</h3>
+          <TimeDropDown />
+        </div>
+        <div className="drop-menu">
+          <h3 className="drop-title">Saturday</h3>
+          <TimeDropDown />
+        </div>
+        <div className="drop-menu">
+          <h3 className="drop-title">Sunday</h3>
+          <TimeDropDown />
+        </div>
+       
+      </div>
       <div className="time-prog-buttons">
-        <TimeDropDown />
-        <TimeDropDown />
-        <TimeDropDown />
-        <TimeDropDown />
-        <TimeDropDown />
-        <TimeDropDown />
-        <TimeDropDown />
         <Link to="/level" style={{ textDecoration: "none" }}>
           <ProgressButton text="BACK" />
         </Link>

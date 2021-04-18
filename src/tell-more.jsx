@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import ProgressButton from "./components/progress-button.jsx";
+import ProgressButton from "./components/progress-button.jsx";
 import "./tell-more.scss";
 
 const TellMore = () => {
@@ -101,26 +101,37 @@ const TellMore = () => {
         </div>
         <div className="contact-form">
           <label>Please click your prefered method of contact.</label>
-          <input type="radio" value="email" name="notificationMethod" checked />
-          Email
-          <input type="radio" value="phone" name="notificationMethod" /> Phone
-          <input type="radio" value="both" name="notificationMethod" /> Both
+          <label>
+            <input
+              type="radio"
+              value="email"
+              name="notificationMethod"
+              checked
+            />
+            Email
+          </label>
+          <label>
+            <input type="radio" value="phone" name="notificationMethod" /> Phone
+          </label>
+          <label>
+            <input type="radio" value="both" name="notificationMethod" /> Both
+          </label>
         </div>
-        <div>
-          <Link to="./who-are-you">
-            <button
-              type="submit"
-              disabled={disabled}
+        <div className="tell-more-progress-buttons">
+          <Link to="/who-are-you" style={{ textDecoration: "none" }}>
+            <ProgressButton
+              className="tell-more-prog-button"
+              id="start-progress-button"
               text="BACK"
-              className="tell-more-progress-button"
+              disabled={disabled}
             />
           </Link>
-          <Link to="./level">
-            <button
-              type="submit"
-              disabled={disabled}
+          <Link to="/level" style={{ textDecoration: "none" }}>
+            <ProgressButton
+              className="prog-button"
+              id="tell-more-progress-button"
               text="NEXT"
-              className="tell-more-progress-button"
+              disabled={disabled}
             />
           </Link>
         </div>

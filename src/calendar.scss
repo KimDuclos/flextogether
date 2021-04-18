@@ -64,7 +64,7 @@ $size375: "375px";
       width: 30%;
     }
     @media (max-width: $size375) {
-      width:65%;
+      width: 65%;
     }
   }
   .days {
@@ -99,6 +99,25 @@ $size375: "375px";
       justify-content: space-between;
     }
   }
+  .time-dropdowns {
+    @media (max-width: $size375) {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 10% auto 10% auto;
+    }
+    .drop-menu {
+      @media (max-width: $size375) {
+        margin: 10% 0 0 0;
+        font-family: "Roboto", "san-serif";
+        font-weight: bold;
+        .drop-title {
+          color: white;
+          font-family: "Roboto", "san-serif";
+        }
+      }
+    }
+  }
   .time-prog-buttons {
     display: flex;
     flex-direction: row;
@@ -114,6 +133,9 @@ $size375: "375px";
     }
     @media (max-width: $size800) {
       width: 58%;
+    }
+    @media (max-width: $size375) {
+      width: 80%;
     }
   }
 }

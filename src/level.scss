@@ -3,6 +3,7 @@
 
 $size1500: "1500px";
 $size1000: "1000px";
+$size375: "375px";
 
 .level-page {
   background-color: #a68227;
@@ -13,6 +14,9 @@ $size1000: "1000px";
   background-position-y: 0%;
   margin: 0%;
   height: 1000px;
+  @media (max-width: $size375) {
+    height: auto;
+  }
   .level-page-title {
     color: white;
     font-size: 4em;
@@ -24,6 +28,11 @@ $size1000: "1000px";
     }
     @media (max-width: $size1000) {
       padding: 20%;
+    }
+    @media (max-width: $size375) {
+      font-size: 3em;
+      width: 90%;
+      padding: 5%;
     }
   }
   .level-page-paragraph {
@@ -78,6 +87,10 @@ $size1000: "1000px";
     @media (max-width: $size1000) {
       width: 45%;
       padding: 0 auto 20% auto;
+    }
+    @media (max-width: $size375) {
+      width: 80%;
+      padding: 0 auto;
     }
   }
 }

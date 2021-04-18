@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+$size375: "375px";
+
 .button-hover-border {
   :hover {
     box-shadow: 0 0 3px #ddd;
@@ -17,11 +19,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: $size375) {
+    width: 300px;
+    height: 200px;
+    padding: 0 2%;
+  }
   .who-are-you-btn-text {
       width: 350px;
       height: 235px;
       display: flex;
       align-items: center;
       border-radius: 8px;
+      @media (max-width: $size375) {
+        font-size: 1em;
+      }
   }
 }

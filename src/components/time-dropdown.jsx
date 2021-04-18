@@ -9,26 +9,23 @@ const TimeDropDown = () => {
     setValue(val);
   };
   const options = [
-    { label: "6:00am", value: "600am" },
-    { label: "7:00am", value: "700am" },
-    { label: "8:00am", value: "800am" },
-    { label: "9:00am", value: "900am" },
-    { label: "10:00am", value: "1000am" },
-    { label: "11:00am", value: "1100am" },
-    { label: "12:00pm", value: "1200pm" },
-    { label: "1:00pm", value: "100pm" },
-    { label: "2:00pm", value: "200pm" },
-    { label: "3:00pm", value: "300pm" },
-    { label: "4:00pm", value: "400pm" },
-    { label: "5:00pm", value: "500pm" },
-    { label: "6:00pm", value: "600pm" },
+    { label: "6:00am", value: "6:00am" },
+    { label: "7:00am", value: "7:00am" },
+    { label: "8:00am", value: "8:00am" },
+    { label: "9:00am", value: "9:00am" },
+    { label: "10:00am", value: "10:00am" },
+    { label: "11:00am", value: "11:00am" },
+    { label: "12:00pm", value: "12:00am" },
+    { label: "1:00pm", value: "1:00am" },
+    { label: "2:00pm", value: "2:00am" },
+    { label: "3:00pm", value: "3:00am" },
+    { label: "4:00pm", value: "4:00am" },
+    { label: "5:00pm", value: "5:00am" },
+    { label: "6:00pm", value: "6:00am" },
   ];
   return (
     <div className="time-dopdown">
-      <div className="preview-values">
-        <h4>Value</h4>
-        {value}
-      </div>
+      <div className="preview-values">{value}</div>
 
       <MultiSelect onChange={handleOnChange} options={options} />
     </div>

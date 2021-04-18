@@ -4,7 +4,7 @@
 $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
-$sizeiPhone: "375px";
+$size375: "375px";
 
 .who-are-you-page {
   background-color: #a68227;
@@ -15,7 +15,7 @@ $sizeiPhone: "375px";
   background-position-y: 0%;
   margin: 0%;
   height: 930px;
-  @media (max-width: $sizeiPhone) {
+  @media (max-width: $size375) {
     height: auto;
   }
   .who-are-you-title {
@@ -30,8 +30,9 @@ $sizeiPhone: "375px";
     @media (max-width: $size1000) {
       margin: 0 auto;
     }
-    @media (max-width: $sizeiPhone) {
+    @media (max-width: $size375) {
       font-size: 3em;
+      margin: 0 0 5% 0;
     }
   }
   .who-are-you-instructions {
@@ -46,7 +47,7 @@ $sizeiPhone: "375px";
     @media (max-width: $size1000) {
       margin: 0 auto;
     }
-    @media (max-width: $sizeiPhone) {
+    @media (max-width: $size375) {
       font-size: 1.2em;
     }
   }
@@ -67,14 +68,14 @@ $sizeiPhone: "375px";
     @media (max-width: $size800) {
       width: 100%;
     }
-    @media (max-width: $sizeiPhone) {
+    @media (max-width: $size375) {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
     .who-are-you-btn {
       padding: 10% 0 10% 0;
-      @media (max-width: $sizeiPhone) {
+      @media (max-width: $size375) {
         margin: auto;
       }
     }
@@ -98,10 +99,11 @@ $sizeiPhone: "375px";
     @media (max-width: $size800) {
       width: 60%;
     }
-    @media (max-width: $sizeiPhone) {
+    @media (max-width: $size375) {
       margin: 0% auto;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      width: 70%;
     }
     .prog-button {
       margin: 0 0 10% 0;

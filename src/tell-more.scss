@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 $size1500: "1500px";
+$size375: "375px";
 
 .tell-more-page {
   background-color: #a68227;
@@ -17,6 +18,10 @@ $size1500: "1500px";
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
     padding: 2% 0 0 30%;
+    @media (max-width: $size375) {
+      font-size: 3em;
+      padding: 0 5% 0 0;
+    }
   }
   .tell-more-paragraph {
     color: white;
@@ -33,6 +38,18 @@ $size1500: "1500px";
     display: flex;
     justify-content: space-between;
     margin: 2% 0 0 34%;
+    color: white;
+    @media (max-width: $size375) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      label {
+        margin: 5% 0 5% 0;
+      }
+      @media (max-width: $size375) {
+        margin: 5% auto;
+      }
+    }
     .contact-input {
       width: 30%;
       border-radius: 4px;
@@ -79,6 +96,11 @@ $size1500: "1500px";
     margin: 26% 55% 0 5%;
     @media (max-width: $size1500) {
       width: 30%;
+    }
+    @media (max-width: $size375) {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
     }
   }
 }

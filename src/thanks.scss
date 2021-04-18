@@ -1,5 +1,6 @@
 $size1500: "1500px";
 $size1000: "1000px";
+$size375: "375px";
 
 .thanks-page {
   .thanks-page-title {
@@ -7,13 +8,19 @@ $size1000: "1000px";
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
     padding: 2% 0 0 19%;
-    line-height: .5em;
+    line-height: 0.5em;
     @media (max-width: $size1500) {
       margin: 0 0 0 10%;
     }
     @media (max-width: $size1000) {
       max-width: 100%;
-      margin: 0 0 0 0;
+      margin: 0;
+    }
+    @media (max-width: $size375) {
+      font-size: 2.5em;
+      line-height: 1em;
+      width: 80%;
+      margin: 0% 0 0 -10%;
     }
   }
   .thanks-page-paragraph {
@@ -29,11 +36,19 @@ $size1000: "1000px";
     @media (max-width: $size1500) {
       margin: 0 0 0 45%;
     }
+    @media (max-width: $size375) {
+      width: 90%;
+      font-size: 1.2em;
+      margin: 0 auto;
+    }
   }
   .thanks-prog-button {
     margin: 15% 70% 0 6%;
     @media (max-width: $size1500) {
       margin: 10% 70% 0 6%;
+    }
+    @media (max-width: $size375) {
+      margin: 10% auto 0 0;
     }
   }
 }
