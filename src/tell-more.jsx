@@ -34,7 +34,7 @@ const TellMore = () => {
           ref={register({
             required: "First name is required.",
             pattern: {
-              value: /^[A-Za-z]+$/i,
+              value: /^[A-Za-z]+$/,
               message: "First name can only have alphabetical characters.",
             },
           })}
@@ -48,28 +48,41 @@ const TellMore = () => {
         ref={register({
           required: "Last name is required.",
           pattern: {
-            value: /^[A-Za-z]+$/i,
+            value: /^[A-Za-z]+$/,
             message: "Last name can only have alphabetical characters."
           },
         })}  
         />
-        {errors.lastName && <span role="alert">This field is required</span>}
+        {errors.lastName && errors.lastName.message && <p>{errors.lastName.message}</p>}
 
         <label htmlFor="email">Email</label>
         <input
-          id="email"
-          aria-invalid={errors.email ? "true" : "false"}
-          {...register("email", { required: true })}
+          name="email"
+          type="email"
+          ref={register({
+            required: "Email is required.",
+            pattern: {
+              value: /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/,
+              message: "Email is not in correct format."
+            }
+          })}
         />
-        {errors.email && <span role="alert">This field is required</span>}
+        {errors.email && errors.email.message && <p>{errors.email.message}</p>}
 
         <label htmlFor="phone">Phone</label>
         <input
-          id="phone"
-          aria-invalid={errors.phone ? "true" : "false"}
-          {...register("phone", { required: true })}
+          name="phone"
+          type="tel"
+          ref={register({
+            required: "Phone number is required.",
+            pattern: {
+              value: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
+              message: "Phone number is not in correct format."
+            }
+          })}
+
         />
-        {errors.phone && <span role="alert">This field is required</span>}
+        {errors.phone && errors.phone.message && <p>{errors.phone.message}</p>}
 
         <input type="submit" />
       </form>
