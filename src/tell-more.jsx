@@ -30,7 +30,9 @@ const TellMore = () => {
         <div className="text-boxes">
           <div className="box">
             <div className="label">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName" className="text-box-labels">
+                First Name
+              </label>
             </div>
             <div className="input">
               <input
@@ -56,7 +58,9 @@ const TellMore = () => {
           <div className="text-boxes">
             <div className="box">
               <div className="label">
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName" className="text-box-labels">
+                  Last Name
+                </label>
               </div>
               <input
                 className="contact-input"
@@ -80,7 +84,9 @@ const TellMore = () => {
           <div className="text-boxes">
             <div className="box">
               <div className="label">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="text-box-labels">
+                  Email
+                </label>
               </div>
               <input
                 className="contact-input"
@@ -125,9 +131,11 @@ const TellMore = () => {
             </div>
           </div>
         </div>
-        <label className="notification-title">Please click your prefered method of contact.</label>
-        <div className="notification-buttons">
-          <label>
+        <label className="notification-title">
+          Please click your prefered method of contact.
+        </label>
+        <div>
+          <label className="notification-labels">
             <input
               type="radio"
               value="email"

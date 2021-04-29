@@ -17,7 +17,7 @@ $size375: "375px";
     color: white;
     font-size: 4em;
     font-family: "Paytone One", sans-serif;
-    padding: 2% 0 0 30%;
+    padding: 10% auto 0 auto;
     @media (max-width: $size375) {
       font-size: 3em;
       padding: 0 5% 0 0;
@@ -37,7 +37,7 @@ $size375: "375px";
     width: 80%;
     display: flex;
     justify-content: space-around;
-    margin: 2% auto 0 auto;
+    margin: 10% auto 0 auto;
     color: white;
     display: flex;
     flex-direction: column;
@@ -56,6 +56,10 @@ $size375: "375px";
       display: flex;
       flex-direction: row;
       width: 100%;
+      .label {
+        width: 100%;
+        text-align: left;
+      }
       .box {
         display: flex;
         flex-direction: column;
@@ -88,7 +92,8 @@ $size375: "375px";
     margin: 5% 0 0 64%;
   }
   .notification-title {
-    margin: 5% auto 0 auto;
+    margin: 5% auto 5% auto;
+    font-size: 1.5em;
   }
   .notification-buttons {
     width: 60%;
@@ -109,7 +114,7 @@ $size375: "375px";
   }
 
   .tell-more-prog-btns {
-    margin: 30% auto;
+    margin: 15% auto 0 auto;
     width: 100%;
     .tell-more-prog-button {
       background-color: black;
