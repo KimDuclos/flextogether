@@ -87,9 +87,10 @@ $size375: "375px";
     font-size: 1.3em;
     font-weight: bold;
     line-height: 1.6em;
-    margin: 0 0 1% 50%;
     text-align: right;
-    margin: 5% 0 0 64%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
   .notification-title {
     margin: 5% auto 5% auto;
@@ -114,8 +115,10 @@ $size375: "375px";
   }
 
   .tell-more-prog-btns {
-    margin: 15% auto 0 auto;
-    width: 100%;
+    margin: 15% auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
     .tell-more-prog-button {
       background-color: black;
       color: white;
@@ -125,7 +128,7 @@ $size375: "375px";
       font-size: 2.4em;
       font-weight: bold;
       border-radius: 8px;
-      margin: 0 5% 0 0;
+      // margin: 0 5% 0 0;
       @media (max-width: $size1500) {
         width: 30%;
       }

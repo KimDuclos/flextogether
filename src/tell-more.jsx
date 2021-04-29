@@ -134,7 +134,7 @@ const TellMore = () => {
         <label className="notification-title">
           Please click your prefered method of contact.
         </label>
-        <div>
+        <div className="notification-pref">
           <label className="notification-labels">
             <input
               type="radio"
