@@ -4,6 +4,7 @@
 $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
+$size500: "500px";
 $size375: "375px";
 
 .tell-more-page {
@@ -100,6 +101,9 @@ $size375: "375px";
   .notification-title {
     margin: 5% auto 5% auto;
     font-size: 1.5em;
+    @media (max-width: $size500) {
+      margin: 15% auto 5% auto;
+    }
   }
   .notification-pref {
     @media (max-width: $size800) {
@@ -136,6 +140,10 @@ $size375: "375px";
       width: 60%;
     }
     @media (max-width: $size800) {
+      margin: 15% auto 0 auto;
+    }
+    @media (max-width: $size500) {
+      width: 100%;
       margin: 15% auto 0 auto;
     }
     .tell-more-prog-button {
