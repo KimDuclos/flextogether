@@ -27,6 +27,7 @@ const TellMore = () => {
     <div className="tell-more-page">
       <div className="tell-more-title">Tell us a bit more...</div>
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
+        
         <div className="text-boxes">
           <div className="box">
             <div className="label">
