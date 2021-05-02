@@ -1,18 +1,21 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./tell-more.scss";
 
 const TellMore = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
   };
+
+  const { push } = useHistory();
 
   useEffect(() => {
     console.log(errors);
@@ -159,11 +162,19 @@ const TellMore = () => {
             type="submit"
             value="BACK"
             className="tell-more-prog-button"
+            onClick= {() => {
+              push("/who-are-you");
+            }}
           />
           <input
             type="submit"
             value="NEXT"
             className="tell-more-prog-button"
+            onClick= {() => {
+              if (isValid) {
+                push("/calendar")
+              }
+            }}
           />
         </div>
       </form>
