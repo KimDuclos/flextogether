@@ -1,23 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ProgressButton from "./components/progress-button.jsx";
+import { useEffect } from "react";
 import "./tell-more.scss";
 
 const TellMore = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
   };
-
-  const [disabled, setDisabled] = useState(true); // set submit to initially disabled
 
   useEffect(() => {
     console.log(errors);
@@ -27,7 +22,6 @@ const TellMore = () => {
     <div className="tell-more-page">
       <div className="tell-more-title">Tell us a bit more...</div>
       <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
-        
         <div className="text-boxes">
           <div className="box">
             <div className="label">
@@ -51,7 +45,9 @@ const TellMore = () => {
                 })}
               />
               {errors.firstName && errors.firstName.message && (
-                <p>{errors.firstName.message}</p>
+                <p style={{ color: "red", textAlign: "left" }}>
+                  {errors.firstName.message}
+                </p>
               )}
             </div>
           </div>
@@ -77,7 +73,9 @@ const TellMore = () => {
                 })}
               />
               {errors.lastName && errors.lastName.message && (
-                <p>{errors.lastName.message}</p>
+                <p style={{ color: "red", textAlign: "left" }}>
+                  {errors.lastName.message}
+                </p>
               )}
             </div>
           </div>
@@ -103,7 +101,9 @@ const TellMore = () => {
                 })}
               />
               {errors.email && errors.email.message && (
-                <p>{errors.email.message}</p>
+                <p style={{ color: "red", textAlign: "left" }}>
+                  {errors.email.message}
+                </p>
               )}
             </div>
           </div>
@@ -127,7 +127,9 @@ const TellMore = () => {
                 })}
               />
               {errors.phone && errors.phone.message && (
-                <p>{errors.phone.message}</p>
+                <p style={{ color: "red", textAlign: "left" }}>
+                  {errors.phone.message}
+                </p>
               )}
             </div>
           </div>
@@ -141,7 +143,6 @@ const TellMore = () => {
               type="radio"
               value="email"
               name="notificationMethod"
-              value="Email"
               checked
             />{" "}
             Email
@@ -154,8 +155,16 @@ const TellMore = () => {
           </label>
         </div>
         <div className="tell-more-prog-btns">
-          <input type="submit" value="BACK" className="tell-more-prog-button" />
-          <input type="submit" value="NEXT" className="tell-more-prog-button" />
+          <input
+            type="submit"
+            value="BACK"
+            className="tell-more-prog-button"
+          />
+          <input
+            type="submit"
+            value="NEXT"
+            className="tell-more-prog-button"
+          />
         </div>
       </form>
     </div>
