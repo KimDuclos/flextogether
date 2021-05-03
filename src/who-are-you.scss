@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+
 
 $size1500: "1500px";
 $size1000: "1000px";
@@ -7,8 +9,7 @@ $size800: "800px";
 $size375: "375px";
 
 .who-are-you-page {
-  background-color: #a68227;
-  background-image: url("./assets/pageBackground.svg");
+  background-image: url("./assets/bg-image.jpg");
   background-size: 120% 120%;
   background-repeat: no-repeat;
   background-position-x: 0%;
@@ -21,9 +22,9 @@ $size375: "375px";
   .who-are-you-title {
     color: white;
     font-size: 4em;
-    font-family: "Paytone One", sans-serif;
-    margin: 0% 0 0 45%;
-    padding: 10% 0 0 0;
+    font-family: "Nunito", sans-serif;
+    margin: 0%;
+    padding: 5% 0 0 0;
     @media (max-width: $size1500) {
       margin: 0 0 0 40%;
     }
@@ -38,9 +39,9 @@ $size375: "375px";
   .who-are-you-instructions {
     color: white;
     font-family: "Roboto", sans-serif;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
-    margin: 1% 0 0 44%;
+    margin: 1% 0;
     @media (max-width: $size1500) {
       margin: 0 0 0 40%;
     }
@@ -56,7 +57,7 @@ $size375: "375px";
     flex-direction: row;
     justify-content: space-around;
     width: 45%;
-    margin: 0 0 0 50%;
+    margin: 0 auto;
     @media (max-width: $size1500) {
       width: 55%;
       margin: 5% 0 0 40%;
@@ -88,7 +89,7 @@ $size375: "375px";
     flex-direction: row;
     justify-content: space-between;
     width: 25%;
-    margin: 2% 5% 0 5%;
+    margin: 0 auto;
     @media (max-width: $size1500) {
       width: 30%;
     }

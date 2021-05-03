@@ -3,14 +3,15 @@
 $size375: "375px";
 
 .base-prog-button {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: gray;
   width: 220px;
   height: 70px;
   font-family: "Roboto", sans-serif;
   font-size: 2.4em;
   font-weight: bold;
   border-radius: 8px;
+  border: none;
   @media (max-width: $size375) {
     width: 120px;
     font-size: 2em;
@@ -27,10 +28,11 @@ $size375: "375px";
   }
 }
 .base-prog-button:active {
-  box-shadow: 0 0 20px green;
+  box-shadow: 0 0 20px rgb(90, 90, 90);
 }
 
 .base-prog-button:disabled {
   background-color: gray;
+  color: white;
 }
 

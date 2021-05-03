@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
 
 $size1500: "1500px";
 $size1000: "1000px";
@@ -8,67 +9,66 @@ $size500: "500px";
 $sizeiPhone: "375px";
 
 .welcome-page {
-    background-color: #A68227;
-    background-image: url("./assets/pageBackground.svg");
-    background-size: 120% 120%;
-    background-repeat: no-repeat;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    margin: 0%;
-    height: 930px;
+  background-image: url("./assets/bg-image.jpg");
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  margin: 0%;
+  height: 930px;
+  @media (max-width: $sizeiPhone) {
+    height: 812px;
+  }
+  .welcome-page-title {
+    color: #ffffff;
+    font-size: 4em;
+    font-family: "Nunito", sans-serif;
+    margin: 0 50% 2% 0;
+    padding: 10% 0 0 0;
+    @media (max-width: $size1500) {
+      margin: 0 0 0 30%;
+    }
+    @media (max-width: $size1000) {
+      margin: 0;
+    }
+    @media (max-width: $size800) {
+      padding: 2% auto 0 auto;
+    }
     @media (max-width: $sizeiPhone) {
-        height: 812px;
+      font-size: 3em;
     }
-    .welcome-page-title {
-        color: white;
-        font-size: 4em;
-        font-family: "Paytone One", sans-serif;
-        margin: 0 0 2% 38%;
-        padding: 10% 0 0 0;
-        @media (max-width: $size1500) {
-            margin: 0 0 0 30%;
-        }
-        @media (max-width: $size1000) {
-            margin: 0;
-        }
-        @media (max-width: $size800) {
-            padding: 2% auto 0 auto;
-        }
-        @media (max-width: $sizeiPhone) {
-            font-size: 3em;
-        }
+  }
+  .welcome-paragraph {
+    color: rgb(255, 255, 255);
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin: 0 0 0 5%;
+    text-align: left;
+    @media (max-width: $size1000) {
+      margin: 5% auto 0 auto;
+      width: 60%;
+      text-align: center;
     }
-    .welcome-paragraph {
-        color: white;
-        width: 50%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.3em;
-        font-weight: bold;
-        line-height: 1.6em;
-        margin: 0 0 0 45%;
-        text-align: center;
-        @media (max-width: $size1000) {
-            margin: 5% auto 0 auto;
-            width: 60%;
-            text-align: center;
-        }
-        @media (max-width: $size800) {
-            width: 80%;
-        }
-        @media (max-width: $size500) {
-            width: 90%;
-        }
-        @media (max-width: $sizeiPhone) {
-            font-size: 1.2em;
-        }
+    @media (max-width: $size800) {
+      width: 80%;
     }
-    #welcome-progress-button {
-        margin: 15% 70% 0 0;
-        @media (max-width: $size1000) {
-            margin: 10% auto;
-        }
-        @media (max-width: $size500) {
-            margin: 15% 0 0 0;
-        }
+    @media (max-width: $size500) {
+      width: 90%;
     }
+    @media (max-width: $sizeiPhone) {
+      font-size: 1.2em;
+    }
+  }
+  #welcome-progress-button {
+    margin: 10% 0 0 60%;
+    @media (max-width: $size1000) {
+      margin: 10% auto;
+    }
+    @media (max-width: $size500) {
+      margin: 15% 0 0 0;
+    }
+  }
 }

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+
 
 $size1500: "1500px";
 $size1000: "1000px";
@@ -8,8 +10,7 @@ $size500: "500px";
 $size375: "375px";
 
 .tell-more-page {
-  background-color: #a68227;
-  background-image: url("./assets/pageBackground.svg");
+  background-image: url("./assets/bg-image.jpg");
   background-size: 120% 120%;
   background-repeat: no-repeat;
   background-position-x: 0%;
@@ -19,8 +20,9 @@ $size375: "375px";
   .tell-more-title {
     color: white;
     font-size: 4em;
-    font-family: "Paytone One", sans-serif;
-    padding: 10% auto 0 auto;
+    font-family: "Nunito", sans-serif;
+    margin: 0%;
+    padding: 5% 0 0 0;
     @media (max-width: $size375) {
       font-size: 3em;
       padding: 0 5% 0 0;
@@ -40,7 +42,7 @@ $size375: "375px";
     width: 80%;
     display: flex;
     justify-content: space-around;
-    margin: 10% auto 0 auto;
+    margin: 7% auto 0 auto;
     color: white;
     display: flex;
     flex-direction: column;
@@ -56,8 +58,9 @@ $size375: "375px";
         align-items: center;
       }
       .label {
-        width: 100%;
+        width: 80%;
         text-align: left;
+        margin: 0 0 0 9%;
       }
       .box {
         display: flex;
@@ -79,7 +82,7 @@ $size375: "375px";
         font-weight: bold;
         display: flex;
         flex-direction: column;
-        margin: 2% 0 0 0;
+        margin: 2% auto;
         @media (max-width: $size800) {
           width: 95%;
         }
@@ -129,7 +132,7 @@ $size375: "375px";
   }
 
   .tell-more-prog-btns {
-    margin: 15% auto;
+    margin: 10% auto 0 auto;
     width: 30%;
     display: flex;
     justify-content: space-between;
@@ -147,15 +150,18 @@ $size375: "375px";
       margin: 15% auto 0 auto;
     }
     .tell-more-prog-button {
-      background-color: black;
-      color: white;
+      background-color: white;
+      color: gray;
+      border: none;
       width: 220px;
       height: 70px;
       font-family: "Roboto", sans-serif;
       font-size: 2.4em;
       font-weight: bold;
       border-radius: 8px;
-      // margin: 0 5% 0 0;
+      div:hover {
+        background-color: rgb(192, 192, 192);
+      }
     }
   }
 }

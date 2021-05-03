@@ -6,7 +6,7 @@ import ProgressButton from "./components/progress-button.jsx";
 const WelcomePage = () => {
   return (
     <div className="welcome-page" >
-      <h1 className="welcome-page-title">Welcome to Flex Together</h1>
+      <h1 className="welcome-page-title">Welcome to FlexTogether</h1>
       <p className="welcome-paragraph">We’re so glad you joined our team.</p>
       <p className="welcome-paragraph">
         This application will help you find a companion through the Flex

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+
 
 $size2000: "2000px";
 $size1500: "1500px";
@@ -10,7 +12,7 @@ $size375: "375px";
 
 .calendar-page {
   background-color: #a68227;
-  background-image: url("./assets/pageBackground.svg");
+  background-image: url("./assets/bg-image.jpg");
   background-size: 120% 120%;
   background-repeat: no-repeat;
   background-position-x: 0%;
@@ -20,8 +22,9 @@ $size375: "375px";
   .calendar-page-title {
     color: white;
     font-size: 4em;
-    font-family: "Paytone One", sans-serif;
-    padding: 10% auto 0 auto;
+    font-family: "Nunito", sans-serif;
+    margin: 0%;
+    padding: 5% 0 0 0;
     @media (max-width: $size375) {
       font-size: 2.2em;
     }

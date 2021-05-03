@@ -6,7 +6,7 @@ import ProgressButton from "./components/progress-button.jsx";
 const StartPage = () => {
   return (
     <div className="start-page">
-      <h1 className="start-page-title">Flex Together</h1>
+      <h1 className="start-page-title">FlexTogether</h1>
       <p className="start-page-paragraph">Please click or tap START</p>
       <Link to="/welcome-page" style={{ textDecoration: "none" }}>
         <ProgressButton
