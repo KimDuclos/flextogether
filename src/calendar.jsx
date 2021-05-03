@@ -44,7 +44,7 @@ const DropdownIndicator = (props) => {
 };
 
 // set dropdown to eastern
-const defaultOption = options[0];
+const defaultOption = "Eastern Time (New York)";
 
 // insert times to blocks - map
 const times = [
@@ -72,9 +72,7 @@ const Calendar = (props) => {
     <TimeButton time={time} onClick={() => setTimeClicked(true)} />
   ));
 
-  const [timeDrop, setTimeDrop ] = useState(false);
-
-  
+  const [timeDrop, setTimeDrop] = useState(false);
 
   return (
     <div className="calendar-page">
@@ -96,8 +94,8 @@ const Calendar = (props) => {
         <Select
           className="dropdown"
           options={options}
-          value={defaultOption}
-          placeholder={"Select an Option"}
+          // value={defaultOption}
+          placeholder={defaultOption}
           components={{ DropdownIndicator }}
         >
           <CaretDownIcon className="caret-dropdown" />

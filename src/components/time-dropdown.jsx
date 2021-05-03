@@ -9,10 +9,8 @@ const TimeDropDown = (props) => {
   const handleOnChange = (val) => {
     setValue(val);
     props.onSelect();
-    console.log("handle onChange")
+    console.log("handle onChange");
   };
-
-
 
   const options = [
     { label: "6:00am", value: "6:00am" },
