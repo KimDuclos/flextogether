@@ -8,7 +8,10 @@ const TimeButton = (props) => {
     <div className="time-btn-hover">
       <div
         className="time-btns"
-        onClick={() => setClicked(!clicked)}
+        onClick={() => {
+          setClicked(!clicked);
+          props.onClick(clicked)
+        }}
         style={{ backgroundColor: clicked ? "white" : "black" }}
       >
         <div

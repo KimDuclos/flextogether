@@ -3,11 +3,12 @@ import "./calendar.scss";
 import TimeButton from "./components/time-button.jsx";
 import TimeDropDown from "./components/time-dropdown.jsx";
 import ProgressButton from "./components/progress-button.jsx";
-import { Link } from "react-router-dom";
 import Select, { components } from "react-select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 library.add(faCaretDown);
 
@@ -62,9 +63,19 @@ const times = [
   "6:00 pm",
 ];
 
-const timeBlocks = times.map((time) => <TimeButton time={time} />);
-
 const Calendar = (props) => {
+  const { push } = useHistory();
+
+  const [timeClicked, setTimeClicked] = useState(false);
+
+  const timeBlocks = times.map((time) => (
+    <TimeButton time={time} onClick={() => setTimeClicked(true)} />
+  ));
+
+  const [timeDrop, setTimeDrop ] = useState(false);
+
+  
+
   return (
     <div className="calendar-page">
       <div className="calendar-page-title">When can you exercise?</div>
@@ -117,41 +128,50 @@ const Calendar = (props) => {
       <div className="time-dropdowns">
         <div className="drop-menu">
           <h3 className="drop-title">Monday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
         <div className="drop-menu">
           <h3 className="drop-title">Tuesday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
         <div className="drop-menu">
           <h3 className="drop-title">Wednesday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
         <div className="drop-menu">
           <h3 className="drop-title">Thursday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
         <div className="drop-menu">
           <h3 className="drop-title">Friday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
         <div className="drop-menu">
           <h3 className="drop-title">Saturday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
         <div className="drop-menu">
           <h3 className="drop-title">Sunday</h3>
-          <TimeDropDown />
+          <TimeDropDown onSelect={() => setTimeDrop(true)} />
         </div>
-       
       </div>
       <div className="time-prog-buttons">
-        <Link to="/level" style={{ textDecoration: "none" }}>
-          <ProgressButton text="BACK" />
-        </Link>
-        <Link to="/thanks" style={{ textDecoration: "none" }}>
-          <ProgressButton text="NEXT" />
-        </Link>
+        <ProgressButton
+          text="BACK"
+          onClick={() => {
+            push("/tell-more");
+          }}
+        />
+        <ProgressButton
+          text="NEXT"
+          onClick={() => {
+            if (timeClicked || timeDrop) {
+              push("/thanks");
+            } else {
+              alert("Please click at least one time slot.");
+            }
+          }}
+        />
       </div>
     </div>
   );

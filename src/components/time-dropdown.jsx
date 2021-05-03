@@ -1,13 +1,19 @@
+import { PropTypes } from "mobx-react";
 import React, { useState } from "react";
 import MultiSelect from "react-multiple-select-dropdown-lite";
 import "react-multiple-select-dropdown-lite/dist/index.css";
 import "./time-button.scss";
 
-const TimeDropDown = () => {
+const TimeDropDown = (props) => {
   const [value, setValue] = useState("");
   const handleOnChange = (val) => {
     setValue(val);
+    props.onSelect();
+    console.log("handle onChange")
   };
+
+
+
   const options = [
     { label: "6:00am", value: "6:00am" },
     { label: "7:00am", value: "7:00am" },
