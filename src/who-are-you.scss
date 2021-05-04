@@ -24,9 +24,9 @@ $size375: "375px";
     font-size: 4em;
     font-family: "Nunito", sans-serif;
     margin: 0%;
-    padding: 5% 0 0 0;
+    padding: 5% 1% 0 0;
     @media (max-width: $size1500) {
-      margin: 0 0 0 40%;
+      margin: 0 auto;
     }
     @media (max-width: $size1000) {
       margin: 0 auto;
@@ -41,9 +41,11 @@ $size375: "375px";
     font-family: "Roboto", sans-serif;
     font-size: 1.5em;
     font-weight: bold;
-    margin: 1% 0;
+    width: 35%;
+    text-align: center;
+    margin: 1% auto 0 auto;
     @media (max-width: $size1500) {
-      margin: 0 0 0 40%;
+      margin: 0 auto;
     }
     @media (max-width: $size1000) {
       margin: 0 auto;
@@ -60,7 +62,7 @@ $size375: "375px";
     margin: 0 auto;
     @media (max-width: $size1500) {
       width: 55%;
-      margin: 5% 0 0 40%;
+      margin: 5% auto 0 auto;
     }
     @media (max-width: $size1000) {
       width: 80%;
@@ -91,7 +93,8 @@ $size375: "375px";
     width: 25%;
     margin: 0 auto;
     @media (max-width: $size1500) {
-      width: 30%;
+      width: 31%;
+      margin: 5% auto 0 auto;
     }
     @media (max-width: $size1000) {
       width: 45%;

@@ -16,6 +16,7 @@ $sizeiPhone: "375px";
   background-position-y: 0%;
   margin: 0%;
   height: 930px;
+  max-width: 100%;
   @media (max-width: $sizeiPhone) {
     height: 812px;
   }
@@ -26,7 +27,7 @@ $sizeiPhone: "375px";
     margin: 0 50% 2% 0;
     padding: 10% 0 0 0;
     @media (max-width: $size1500) {
-      margin: 0 0 0 30%;
+      margin: 0 39% 0 0;
     }
     @media (max-width: $size1000) {
       margin: 0;
@@ -63,7 +64,7 @@ $sizeiPhone: "375px";
     }
   }
   #welcome-progress-button {
-    margin: 10% 0 0 60%;
+    margin: 12% 0 0 62%;
     @media (max-width: $size1000) {
       margin: 10% auto;
     }

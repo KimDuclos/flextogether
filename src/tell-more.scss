@@ -53,6 +53,9 @@ $size375: "375px";
       display: flex;
       flex-direction: row;
       width: 100%;
+      @media (max) {
+        margin: 0 0 0 0%;
+      }
       @media (max-width: $size800) {
         flex-direction: column;
         align-items: center;
@@ -61,6 +64,9 @@ $size375: "375px";
         width: 80%;
         text-align: left;
         margin: 0 0 0 9%;
+        @media (max-width: $size1500) {
+          margin: 0 0 0 0%;
+        }
       }
       .box {
         display: flex;
@@ -83,6 +89,10 @@ $size375: "375px";
         display: flex;
         flex-direction: column;
         margin: 2% auto;
+        @media (max-width: $size1500) {
+          width: 94%;
+          margin: 2% 0 2% 0%;
+        }
         @media (max-width: $size800) {
           width: 95%;
         }
@@ -104,6 +114,9 @@ $size375: "375px";
   .notification-title {
     margin: 5% auto 5% auto;
     font-size: 1.5em;
+    @media (max-width: $size1500) {
+      margin: 10% 0 5% 0;
+    }
     @media (max-width: $size500) {
       margin: 15% auto 5% auto;
     }
@@ -137,7 +150,8 @@ $size375: "375px";
     display: flex;
     justify-content: space-between;
     @media (max-width: $size1500) {
-      width: 40%;
+      width: 39%;
+      margin: 15% auto 0 auto;
     }
     @media (max-width: $size1000) {
       width: 60%;
