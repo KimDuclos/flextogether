@@ -45,6 +45,9 @@ $size375: "375px";
     @media (max-width: $size1500) {
       margin: 0 auto;
     }
+    @media (max-width: $size1500) {
+      width: 60%;
+    }
     @media (max-width: $size375) {
       width: 90%;
       font-size: 1.2em;

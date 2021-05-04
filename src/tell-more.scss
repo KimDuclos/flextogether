@@ -46,6 +46,9 @@ $size375: "375px";
     color: white;
     display: flex;
     flex-direction: column;
+    @media (max-width: $size1500) {
+      margin: 10% auto 0 auto;
+    }
     @media (max-width: $size800) {
       width: 95%;
     }
@@ -154,7 +157,7 @@ $size375: "375px";
       margin: 15% auto 0 auto;
     }
     @media (max-width: $size1000) {
-      width: 60%;
+      width: 57%;
     }
     @media (max-width: $size800) {
       margin: 15% auto 0 auto;

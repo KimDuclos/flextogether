@@ -27,8 +27,7 @@ $sizeiPhone: "375px";
     margin: 0%;
     padding: 10% 0 0 6%;
     @media (max-width: $size1000) {
-      margin: 25% 0 0 30%;
-      text-align: center;
+      font-size: 6em;
     }
     @media (max-width: $size800) {
       width: 100%;
@@ -52,7 +51,7 @@ $sizeiPhone: "375px";
       margin: 20% 0 0 68%;
     }
     @media (max-width: $size1000) {
-      margin: 30% 0 0 5%;
+      margin: 40% 0 0 60%;
     }
     @media (max-width: $size800) {
       margin: 70% 0 0 7%;
@@ -69,7 +68,7 @@ $sizeiPhone: "375px";
   #start-progress-button {
     margin: 2% 0 0 62%;
     @media (max-width: $size1000) {
-      margin: 2% 51% 0 0;
+      margin: 2% 0 0 57%;
     }
     @media (max-width: $size800) {
       margin: 2% 39% 0 0;

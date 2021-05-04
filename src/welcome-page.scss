@@ -31,6 +31,7 @@ $sizeiPhone: "375px";
     }
     @media (max-width: $size1000) {
       margin: 0;
+      padding: 5% 0 0 0;
     }
     @media (max-width: $size800) {
       padding: 2% auto 0 auto;
@@ -52,6 +53,7 @@ $sizeiPhone: "375px";
       margin: 5% auto 0 auto;
       width: 60%;
       text-align: center;
+      line-height: 1.25em;
     }
     @media (max-width: $size800) {
       width: 80%;

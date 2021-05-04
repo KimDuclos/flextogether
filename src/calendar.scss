@@ -28,6 +28,9 @@ $size375: "375px";
     @media (max-width: $size1500) {
       padding: 5% 5% 0 0;
     }
+    @media (max-width: $size1000) {
+      padding: 5% 0 0 0%;
+    }
     @media (max-width: $size375) {
       font-size: 2.2em;
     }
