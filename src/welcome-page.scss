@@ -34,6 +34,7 @@ $sizeiPhone: "375px";
       padding: 5% 0 0 0;
     }
     @media (max-width: $size800) {
+      font-size: 3.5em;
       padding: 2% auto 0 auto;
     }
     @media (max-width: $sizeiPhone) {

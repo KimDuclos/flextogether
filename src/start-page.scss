@@ -30,8 +30,10 @@ $sizeiPhone: "375px";
       font-size: 6em;
     }
     @media (max-width: $size800) {
-      width: 100%;
-      margin: 15% 5% 0 0%;
+      width: 80%;
+      font-size: 5em;
+      margin: 0 0 0 5%;
+      padding: 10% 0 0 0;
     }
     @media (max-width: $size500) {
       margin: 30% 0 0 0;
@@ -54,7 +56,8 @@ $sizeiPhone: "375px";
       margin: 40% 0 0 60%;
     }
     @media (max-width: $size800) {
-      margin: 70% 0 0 7%;
+      margin: 55% 0 0 58%;
+      font-size: 1.6em;
     }
     @media (max-width: $size500) {
       margin: 105% 0 0 0;
@@ -71,7 +74,7 @@ $sizeiPhone: "375px";
       margin: 2% 0 0 57%;
     }
     @media (max-width: $size800) {
-      margin: 2% 39% 0 0;
+      margin: 2% 0 0 54%;
     }
     @media (max-width: $size500) {
       margin: 2% auto 0 auto;
