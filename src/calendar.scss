@@ -31,6 +31,9 @@ $size375: "375px";
     @media (max-width: $size1000) {
       padding: 5% 0 0 0%;
     }
+    @media (max-width: $size500) {
+      font-size: 3.5em;
+    }
     @media (max-width: $size375) {
       font-size: 2.2em;
     }
@@ -50,6 +53,10 @@ $size375: "375px";
     @media (max-width: $size1000) {
       width: 70%;
     }
+    @media (max-width: $size500) {
+      width: 90%;
+      font-size: 1.2em;
+    }
     @media (max-width: $size375) {
       font-size: 1em;
       width: 90%;
@@ -63,6 +70,9 @@ $size375: "375px";
     font-weight: bold;
     line-height: 1.6em;
     margin: 0 auto;
+    @media (max-width: $size500) {
+      width: 100%;
+    }
     @media (max-width: $size375) {
       font-size: 1.5em;
       width: 40%;
@@ -79,6 +89,9 @@ $size375: "375px";
     }
     @media (max-width: $size800) {
       width: 30%;
+    }
+    @media (max-width: $size500) {
+      width: 60%;
     }
     @media (max-width: $size375) {
       width: 65%;
@@ -138,7 +151,7 @@ $size375: "375px";
     @media (max-width: $size500) {
       display: flex;
       flex-direction: column;
-      width: 80%;
+      width: 60%;
       margin: 10% auto 10% auto;
     }
     @media (max-width: $size375) {
@@ -174,6 +187,9 @@ $size375: "375px";
     }
     @media (max-width: $size800) {
       width: 58%;
+    }
+    @media (max-width: $size500) {
+      width: 90%;
     }
     @media (max-width: $size375) {
       width: 80%;

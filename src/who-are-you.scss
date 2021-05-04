@@ -6,6 +6,7 @@
 $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
+$size500: "500px";
 $size375: "375px";
 
 .who-are-you-page {
@@ -72,6 +73,12 @@ $size375: "375px";
     @media (max-width: $size800) {
       width: 100%;
     }
+    @media (max-width: $size500) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2% auto 0 auto;
+    }
     @media (max-width: $size375) {
       display: flex;
       flex-direction: column;
@@ -79,6 +86,9 @@ $size375: "375px";
     }
     .who-are-you-btn {
       padding: 10% 0 10% 0;
+      @media (max-width: $size500) {
+        padding: 2% 0;
+      }
       @media (max-width: $size375) {
         margin: auto;
       }
@@ -103,6 +113,10 @@ $size375: "375px";
     }
     @media (max-width: $size800) {
       width: 60%;
+    }
+    @media (max-width: $size500) {
+      width: 90%;
+      margin: 5% auto 0 auto;
     }
     @media (max-width: $size375) {
       margin: 0% auto;

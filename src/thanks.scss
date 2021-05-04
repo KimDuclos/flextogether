@@ -2,6 +2,7 @@
 
 $size1500: "1500px";
 $size1000: "1000px";
+$size500: "500px";
 $size375: "375px";
 
 .thanks-page {
@@ -24,6 +25,10 @@ $size375: "375px";
     @media (max-width: $size1000) {
       max-width: 100%;
       margin: 0;
+    }
+    @media (max-width: $size500) {
+      font-size: 3em;
+      line-height: 1em;
     }
     @media (max-width: $size375) {
       font-size: 2.5em;
@@ -48,6 +53,10 @@ $size375: "375px";
     @media (max-width: $size1500) {
       width: 60%;
     }
+    @media (max-width: $size500) {
+      width: 80%;
+      font-size: 1.4em;
+    }
     @media (max-width: $size375) {
       width: 90%;
       font-size: 1.2em;
@@ -58,6 +67,9 @@ $size375: "375px";
     margin: 10% auto 0 auto;
     @media (max-width: $size1500) {
       margin: 10% auto 0 auto;
+    }
+    @media (max-width: $size500) {
+      margin: 20% auto 0 auto;
     }
     @media (max-width: $size375) {
       margin: 10% auto 0 0;

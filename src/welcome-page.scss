@@ -61,6 +61,9 @@ $sizeiPhone: "375px";
     }
     @media (max-width: $size500) {
       width: 90%;
+      margin: 8% auto 0 auto;
+      font-size: 1.3em;
+      line-height: 1.3em;
     }
     @media (max-width: $sizeiPhone) {
       font-size: 1.2em;

@@ -4,6 +4,13 @@ $size800: "800px";
 $size375: "375px";
 
 .time-dropdown {
-    width: 500px;
+    width: auto;
     height: 300px;
+    @media (max-width: $size500) {
+        width: 50%;
+    }
 }
+
+// .msl-vars {
+//     --input-width: 80%;
+// }
