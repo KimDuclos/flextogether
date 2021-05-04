@@ -34,7 +34,7 @@ $size375: "375px";
       font-size: 2.5em;
       line-height: 1em;
       width: 80%;
-      margin: 0% 0 0 -10%;
+      margin: 0% auto 0 auto;
     }
   }
   .thanks-page-paragraph {
@@ -59,8 +59,8 @@ $size375: "375px";
     }
     @media (max-width: $size375) {
       width: 90%;
-      font-size: 1.2em;
-      margin: 0 auto;
+      font-size: 1.5em;
+      margin: 5% auto 5% auto;
     }
   }
   .thanks-prog-button {
@@ -72,7 +72,7 @@ $size375: "375px";
       margin: 20% auto 0 auto;
     }
     @media (max-width: $size375) {
-      margin: 10% auto 0 0;
+      margin: 20% auto 0 0;
     }
   }
 }

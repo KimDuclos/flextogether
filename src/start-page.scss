@@ -6,7 +6,7 @@ $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
 $size500: "500px";
-$sizeiPhone: "375px";
+$size375: "375px";
 
 .start-page {
   background-image: url("./assets/bg-image.jpg");
@@ -15,7 +15,7 @@ $sizeiPhone: "375px";
   background-position-x: 0%;
   background-position-y: 0%;
   height: 930px;
-  @media (max-width: $sizeiPhone) {
+  @media (max-width: $size375) {
     height: 810px;
   }
   .start-page-title {
@@ -40,8 +40,9 @@ $sizeiPhone: "375px";
       margin: 0% auto;
       padding: 25% 0 0 0;
     }
-    @media (max-width: $sizeiPhone) {
-      margin: 20% 0 0 0;
+    @media (max-width: $size375) {
+      margin: 0% auto 0 auto;
+      font-size: 3em;
     }
   }
   .start-page-paragraph {
@@ -65,9 +66,9 @@ $sizeiPhone: "375px";
       margin: 50% 0 2% 0;
       text-align: center;
     }
-    @media (max-width: $sizeiPhone) {
+    @media (max-width: $size375) {
       font-size: 1.5em;
-      margin: 100% 0 0 0;
+      margin: 80% 0 0 0;
     }
   }
   #start-progress-button {
@@ -80,6 +81,10 @@ $sizeiPhone: "375px";
     }
     @media (max-width: $size500) {
       margin: 2% auto 0 auto;
+    }
+    @media (max-width: $size375) {
+      width: 80%;
+      margin: 8% 0 0 0;
     }
   }
 }

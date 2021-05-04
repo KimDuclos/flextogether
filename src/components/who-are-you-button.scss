@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+$size500: "500px";
 $size375: "375px";
 
 .button-hover-border {
@@ -30,6 +31,9 @@ $size375: "375px";
       display: flex;
       align-items: center;
       border-radius: 8px;
+      @media (max-width: $size500) {
+        height: 100px;
+      }
       @media (max-width: $size375) {
         font-size: 1em;
       }
