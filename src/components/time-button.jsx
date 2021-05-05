@@ -12,11 +12,11 @@ const TimeButton = (props) => {
           setClicked(!clicked);
           props.onClick(clicked)
         }}
-        style={{ backgroundColor: clicked ? "white" : "black" }}
+        style={{ backgroundColor: clicked ? "gray" : "white" }}
       >
         <div
           className="time-text"
-          style={{ color: clicked ? "black" : "white" }}
+          style={{ color: clicked ? "white" : "gray" }}
         >
           {props.time}
         </div>

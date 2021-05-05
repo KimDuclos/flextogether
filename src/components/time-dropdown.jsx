@@ -1,4 +1,3 @@
-import { PropTypes } from "mobx-react";
 import React, { useState } from "react";
 import MultiSelect from "react-multiple-select-dropdown-lite";
 import "react-multiple-select-dropdown-lite/dist/index.css";

@@ -80,6 +80,8 @@ $size375: "375px";
     }
   }
   .base-prog-button {
-    width: 90%;
+    @media (max-width: $size375) {
+      width: 90%;
+    }
   }
 }

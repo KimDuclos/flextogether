@@ -1,6 +1,5 @@
 import React from "react";
 import "./thanks.scss";
-import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 import { Link } from "react-router-dom";
 
