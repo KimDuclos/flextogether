@@ -189,10 +189,16 @@ $size375: "375px";
       width: 58%;
     }
     @media (max-width: $size500) {
-      width: 90%;
+      width: 70%;
     }
     @media (max-width: $size375) {
       width: 80%;
+      margin: 6% auto 0 auto;
+    }
+    #cal-prog-button {
+      @media (max-width: $size500) {
+        width: 145px
+      }
     }
   }
 }

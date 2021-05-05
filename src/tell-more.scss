@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
 
-
 $size1500: "1500px";
 $size1000: "1000px";
 $size800: "800px";
@@ -17,12 +16,18 @@ $size375: "375px";
   background-position-y: 0%;
   margin: 0%;
   height: 930px;
+  @media (max-width: $size500) {
+    height: auto;
+  }
   .tell-more-title {
     color: white;
     font-size: 4em;
     font-family: "Nunito", sans-serif;
     margin: 0%;
     padding: 5% 0 0 0;
+    @media (max-width: $size500) {
+      font-size: 3.5em;
+    }
     @media (max-width: $size375) {
       font-size: 3em;
       padding: 0 5% 0 0;
@@ -52,6 +57,9 @@ $size375: "375px";
     @media (max-width: $size800) {
       width: 95%;
       margin: 5% auto 0 auto;
+    }
+    @media (max-width: $size375) {
+      margin: 10% auto 0 auto;
     }
     .text-boxes {
       display: flex;
@@ -170,12 +178,13 @@ $size375: "375px";
       margin: 15% auto 0 auto;
     }
     @media (max-width: $size500) {
-      width: 95%;
-      margin: 15% auto 0 auto;
+      width: 73.5%;
+      margin: 14% auto 12% auto;
     }
     @media (max-width: $size375) {
       width: 100%;
       justify-content: space-around;
+      margin: 20% auto 30% auto;
     }
     .tell-more-prog-button {
       background-color: white;
@@ -187,9 +196,15 @@ $size375: "375px";
       font-size: 2.4em;
       font-weight: bold;
       border-radius: 8px;
+      @media (max-width: $size500) {
+        width: 165px;
+      }
       @media (max-width: $size375) {
         width: 44%;
       }
+    }
+    .tell-more-prog-button:active {
+      box-shadow: 0 0 20px rgb(90, 90, 90);
     }
   }
 }

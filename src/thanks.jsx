@@ -4,14 +4,6 @@ import backgroundImage from "./assets/backgroundImage.png";
 import ProgressButton from "./components/progress-button.jsx";
 import { Link } from "react-router-dom";
 
-// const thanksBackgroundStyle = {
-//   width: "100%",
-//   height: "900px",
-//   backgroundImage: `url(${bgImage})`,
-//   backgroundSize: "cover",
-//   margin: "0% 0 0 0",
-// };
-
 const Thanks = () => {
   return (
     <div className="thanks-page">
@@ -26,7 +18,7 @@ const Thanks = () => {
         </p>
         <p>The Flex Together Team</p>
       </div>
-      <div className="thanks-prog-button">
+      <div className="thanks-prog-button" id="thanks-prog-btn">
         <Link to="/" style={{ textDecoration: "none" }}>
           <ProgressButton text="DONE" />
         </Link>

@@ -15,8 +15,11 @@ $size375: "375px";
   background-position-x: 0%;
   background-position-y: 0%;
   height: 930px;
+  @media (max-width: $size500) {
+    height: 820px;
+  }
   @media (max-width: $size375) {
-    height: 810px;
+    height: 818px;
   }
   .start-page-title {
     color: white;
@@ -41,8 +44,8 @@ $size375: "375px";
       padding: 25% 0 0 0;
     }
     @media (max-width: $size375) {
-      margin: 0% auto 0 auto;
-      font-size: 3em;
+      margin: 0% 0 0 8%;
+      font-size: 3.2em;
     }
   }
   .start-page-paragraph {
@@ -68,13 +71,13 @@ $size375: "375px";
     }
     @media (max-width: $size375) {
       font-size: 1.5em;
-      margin: 80% 0 0 0;
+      margin: 50% 0 0 0;
     }
   }
   #start-progress-button {
-    margin: 2% 0 0 62%;
+    margin: 2% 0 0 60%;
     @media (max-width: $size1000) {
-      margin: 2% 0 0 57%;
+      margin: 2% 0 0 50%;
     }
     @media (max-width: $size800) {
       margin: 2% 0 0 54%;
@@ -84,7 +87,7 @@ $size375: "375px";
     }
     @media (max-width: $size375) {
       width: 80%;
-      margin: 8% 0 0 0;
+      margin: 20% 0 0 0;
     }
   }
 }

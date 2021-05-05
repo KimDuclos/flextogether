@@ -9,12 +9,12 @@ const WhoAreYouButton = (props) => {
         className="who-are-you-button"
         onClick={props.onClick}
         style={{
-          backgroundColor: props.selected ? "white" : "black",
+          backgroundColor: props.selected ? "gray" : "white",
         }}
       >
         <div
           className="who-are-you-btn-text"
-          style={{ color: props.selected ? "black" : "white" }}
+          style={{ color: props.selected ? "white" : "gray" }}
         >
           {props.text}
         </div>

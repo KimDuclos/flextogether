@@ -32,6 +32,9 @@ $size375: "375px";
     @media (max-width: $size1000) {
       margin: 0 auto;
     }
+    @media (max-width: $size500) {
+      font-size: 3.5em;
+    }
     @media (max-width: $size375) {
       font-size: 3em;
       margin: 0 0 5% 0;
@@ -132,10 +135,19 @@ $size375: "375px";
     }
     .prog-button {
       margin: 0 0 10% 0;
+      .prog-button:active {
+        box-shadow: 0 0 20px rgb(90, 90, 90);
+      }
     }
     .base-prog-button {
       @media (max-width: $size500) {
+        width: 165px;
+      }
+      @media (max-width: $size375) {
         width: 150px;
+      }
+      .base-prog-button:active {
+        box-shadow: 0 0 20px rgb(90, 90, 90);
       }
     }
     .who-are-you-next-button {

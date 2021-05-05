@@ -155,12 +155,14 @@ const Calendar = (props) => {
       </div>
       <div className="time-prog-buttons">
         <ProgressButton
+          id="cal-prog-button"
           text="BACK"
           onClick={() => {
             push("/tell-more");
           }}
         />
         <ProgressButton
+          id="cal-prog-button"
           text="NEXT"
           onClick={() => {
             if (timeClicked || timeDrop) {
