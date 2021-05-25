@@ -10,11 +10,15 @@ $size375: "375px";
 
 .start-page {
   background-image: url("./assets/bg-image.jpg");
-  background-size: 120% 120%;
-  background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  height: 930px;
+  // background-size: 120% 120%;
+  // background-repeat: no-repeat;
+  // background-position-x: 0%;
+  // background-position-y: 0%;
+  // height: 930px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   @media (max-width: $size500) {
     height: 820px;
   }
