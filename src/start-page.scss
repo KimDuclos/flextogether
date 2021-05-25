@@ -9,12 +9,11 @@ $size500: "500px";
 $size375: "375px";
 
 .start-page {
-  background-image: url("./assets/bg-image.jpg");
-  background-size: 120% 120%;
-  background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  height: 930px;
+  background: url("./assets/bg-image.svg") no-repeat center center fixed;
+  background-size: cover;
+  height: auto;
+  overflow: hidden;
+
   @media (max-width: $size500) {
     height: 820px;
   }
@@ -75,7 +74,7 @@ $size375: "375px";
     }
   }
   #start-progress-button {
-    margin: 2% 0 0 60%;
+    margin: 2% 0 10% 60%;
     @media (max-width: $size1000) {
       margin: 2% 0 0 50%;
     }
