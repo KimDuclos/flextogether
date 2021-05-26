@@ -14,6 +14,9 @@ $size375: "375px";
   background-size: 100% 100%;
   background-size: cover;
   height: 100vh;
+  @media (max-width: $size1500) {
+    height: 200vh;
+  }
   .tell-more-title {
     color: white;
     font-size: 4em;
