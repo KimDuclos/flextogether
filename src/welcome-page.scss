@@ -14,9 +14,6 @@ $sizeiPhone: "375px";
   background-size: 100% 100%;
   background-size: cover;
   height: 100vh;
-  @media (max-width: $sizeiPhone) {
-    height: 812px;
-  }
   .welcome-page-title {
     color: #ffffff;
     font-size: 4em;
