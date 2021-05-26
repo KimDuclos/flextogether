@@ -11,14 +11,11 @@ $size500: "500px";
 $size375: "375px";
 
 .calendar-page {
-  background-color: #a68227;
-  background-image: url("./assets/bg-image.jpg");
-  background-size: 120% 120%;
+  background: url("./assets/bg-image.svg");
   background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  margin: 0%;
-  height: auto;
+  background-size: 100% 100%;
+  background-size: cover;
+  height: 200vh;
   .calendar-page-title {
     color: white;
     font-size: 4em;

@@ -10,13 +10,11 @@ $size500: "500px";
 $size375: "375px";
 
 .who-are-you-page {
-  background-image: url("./assets/bg-image.jpg");
-  background-size: 120% 120%;
+  background: url("./assets/bg-image.svg");
   background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  margin: 0%;
-  height: 930px;
+  background-size: 100% 100%;
+  background-size: cover;
+  height: 100vh;
   @media (max-width: $size375) {
     height: auto;
   }

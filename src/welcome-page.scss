@@ -9,14 +9,11 @@ $size500: "500px";
 $sizeiPhone: "375px";
 
 .welcome-page {
-  background-image: url("./assets/bg-image.jpg");
-  background-size: 120% 120%;
+  background: url("./assets/bg-image.svg");
   background-repeat: no-repeat;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  margin: 0%;
-  height: 930px;
-  max-width: 100%;
+  background-size: 100% 100%;
+  background-size: cover;
+  height: 100vh;
   @media (max-width: $sizeiPhone) {
     height: 812px;
   }
