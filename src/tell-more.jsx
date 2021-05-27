@@ -146,8 +146,8 @@ const TellMore = () => {
               type="radio"
               value="email"
               name="notificationMethod"
-              checked
-            />{" "}
+              defaultChecked
+            />
             Email
           </label>
           <label>
@@ -162,7 +162,7 @@ const TellMore = () => {
             type="submit"
             value="BACK"
             className="tell-more-prog-button"
-            onClick= {() => {
+            onClick={() => {
               push("/who-are-you");
             }}
           />
@@ -170,9 +170,9 @@ const TellMore = () => {
             type="submit"
             value="NEXT"
             className="tell-more-prog-button"
-            onClick= {() => {
+            onClick={() => {
               if (isValid) {
-                push("/calendar")
+                push("/calendar");
               }
             }}
           />
